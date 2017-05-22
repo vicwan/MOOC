@@ -1,30 +1,18 @@
 .data
 str:	.asciiz	"this is a string"
-
+space:	.space 20
 
 .text
 .globl main
 
 main:	
-li $t1, 1
-li $v0, 5
+
+li $a1, 8
+la $a0, space
+li $v0, 8
 syscall
 
-beq $v0, $t1, print
-j end
-
-print:
-la $a0, str
-li $v0, 4
-
-
-syscall
-j end
-
-end: 
-li $v0, 12
+lw $a0, 3($a0)
+li $v0, 11
 syscall
 
-lala:
-li $v0, 4
-jr $ra
