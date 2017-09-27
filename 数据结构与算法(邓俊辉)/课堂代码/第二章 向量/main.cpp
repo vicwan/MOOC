@@ -11,7 +11,7 @@
 using namespace std;
 
 /**
-	向量 ADT 接口
+	向量 ADT 接口		[lo, hi) 遵循左闭右开
  
  1. size()			报告向量当前的规模 (元素总数)
  2. get(r)			获取秩为 r 的元素
@@ -48,7 +48,7 @@ private:
 public:
 	Vector (int c = DEFAULT_CAPACITY)				//构造函数
 	{
-		_elem = new Vector [_capacity = DEFAULT_CAPACITY];
+		_elem = new T [_capacity = DEFAULT_CAPACITY];
 		_size = 0;
 	}
 	
@@ -79,7 +79,14 @@ public:
 	void put(T& e, Rank r);
 	Rank insert(T& e, Rank r);
 	void remove (Rank r);
+	Rank max ( Rank lo, Rank hi );
 	
+	// 排序
+	bool bubble ( Rank lo, Rank hi );
+	void bubbleSort ( Rank lo, Rank hi );		// 起泡排序
+	void selectionSort ( Rank lo , Rank hi );	// 选择排序
+	void merge ( Rank lo, Rank mi, Rank hi );
+	void mergeSort ( Rank lo, Rank hi );		// 归并排序
 };
 # pragma mark - Private Functions
 template <class T>
@@ -100,7 +107,7 @@ template <class T>
 void Vector<T>::__expand() {
 	if (_size < _capacity) return;
 	T *oldElem = _elem;
-	_elem = new Vector[_capacity <<= 1];
+	_elem = new T[_capacity <<= 1];
 	for (int i = 0; i < _size; i++) {
 		_elem[i] = oldElem[i];	// T 为基本类型, 或已重载赋值操作符 '='
 	}
@@ -118,7 +125,7 @@ template <class T>
 void Vector<T>::printVector(){
 	cout << "\n" << endl;
 	for (int i = 0; i < _size; i++) {
-		cout << _elem[i] << "\t" << endl;
+		cout << _elem[i] << "\t";
 	}
 	cout << "\n" << endl;
 }
@@ -165,13 +172,96 @@ void Vector<T>::remove(Rank r) {
 	_size--;
 }
 
+template <typename T>	// 起泡单次扫描
+bool Vector<T>::bubble(Rank lo, Rank hi)
+{
+	bool sorted = true;
+	while (++lo < hi) {
+		if (_elem[lo - 1] > _elem[lo]) {
+			sorted = false;
+			swap(_elem[lo - 1], _elem[lo]);
+		}
+	}
+	return sorted;
+}
+
+template <typename T>	// 起泡排序算法
+void Vector<T>::bubbleSort(Rank lo, Rank hi)
+{
+	while (!bubble(lo, hi--));
+}
+
+template <typename T>
+Rank Vector<T>::max(Rank lo, Rank hi) {
+	Rank maxRank = hi;
+	while ( lo < hi-- ) {
+		if (_elem[maxRank] < _elem[hi]) {
+			maxRank = hi;
+		}
+	}
+	return maxRank;
+}
+
+template <typename T>	// 选择排序算法
+void Vector<T>::selectionSort(Rank lo, Rank hi)
+{
+	while (lo < --hi) {
+		Rank maxRank = max( lo, hi);
+		if (maxRank != hi) {
+			swap(_elem[maxRank], _elem[hi]);
+		}
+	}
+}
+
+template <typename T>
+void Vector<T>::merge(Rank lo, Rank mi, Rank hi) {
+	// 分别给出 ABC 向量
+	T* A = _elem + lo;
+	int lb = mi - lo; T* B = new T[mi - lo];
+	int lc = hi - mi; T* C = _elem + mi;
+	// 初始化向量 B
+	for (int i = 0 ; i < lb; i ++) {
+		B[i] = A[i];
+	}
+	// 进行排序
+	for (Rank i = 0, j = 0, k = 0; j < lb;) {
+		// 如果 B 中元素小于等于 C 中元素, 或 C 中元素已经耗尽. 则复制 B 中元素
+		if ( (B[j] <= C[k]) || (lc <= k) ) A[i++] = B[j++];
+		// 如果 C 中元素小于 B 中元素, 且 C 中元素尚存. 则复制 C 中元素
+		if ( (C[k] < B[j]) && (k < lc) ) A[i++] = C[k++];
+		
+
+	}
+	// 释放 B
+	delete [] B;
+}
+
+template <typename T>
+void Vector<T>::mergeSort(Rank lo, Rank hi) {
+	
+}
+
+
 
 
 #pragma mark - Main
 int main(int argc, const char * argv[]) {
 	// insert code here...
-	std::cout << "Hello, World!\n";
 	
+	
+	
+	
+	Vector<int> *v1 = new Vector<int>[20];
+	
+	for (int i = 0; i < 20; i++) {
+		v1->insert(i, 0);
+	}
+	
+	v1->printVector();
+	
+	v1->selectionSort(0, v1->size());
+	
+	v1->printVector();
 	
 	return 0;
 }
