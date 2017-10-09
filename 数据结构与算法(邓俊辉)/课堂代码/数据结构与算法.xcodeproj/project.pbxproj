@@ -12,6 +12,7 @@
 		3D94ADF01F7A2FA900E484CB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D94ADEF1F7A2FA900E484CB /* main.cpp */; };
 		3D97BC3B1F6BB32D00A94B90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D97BC3A1F6BB32D00A94B90 /* main.cpp */; };
 		3D97BC481F6BB33F00A94B90 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D97BC471F6BB33F00A94B90 /* main.cpp */; };
+		3DC732EA1F7BD72C00CAAC54 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC732E91F7BD72C00CAAC54 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		3DC732E51F7BD72C00CAAC54 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +85,8 @@
 		3D97BC3A1F6BB32D00A94B90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3D97BC451F6BB33F00A94B90 /* 第一章 绪论 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "第一章 绪论"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D97BC471F6BB33F00A94B90 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3DC732E71F7BD72C00CAAC54 /* 第五章 二叉树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "第五章 二叉树"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC732E91F7BD72C00CAAC54 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3D97BC421F6BB33F00A94B90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DC732E41F7BD72C00CAAC54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -150,6 +169,7 @@
 				3D40B66F1F70C4AB00A5C125 /* 第二章 向量 */,
 				3D7F713A1F76777A008274A8 /* 第三章 列表 */,
 				3D94ADEE1F7A2FA900E484CB /* 第四章 栈与队列 */,
+				3DC732E81F7BD72C00CAAC54 /* 第五章 二叉树 */,
 				3D97BC381F6BB32D00A94B90 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +182,7 @@
 				3D40B66E1F70C4AB00A5C125 /* 第二章 向量 */,
 				3D7F71391F76777A008274A8 /* 第三章 列表 */,
 				3D94ADED1F7A2FA900E484CB /* 第四章 栈与队列 */,
+				3DC732E71F7BD72C00CAAC54 /* 第五章 二叉树 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +201,14 @@
 				3D97BC471F6BB33F00A94B90 /* main.cpp */,
 			);
 			path = "第一章 绪论";
+			sourceTree = "<group>";
+		};
+		3DC732E81F7BD72C00CAAC54 /* 第五章 二叉树 */ = {
+			isa = PBXGroup;
+			children = (
+				3DC732E91F7BD72C00CAAC54 /* main.cpp */,
+			);
+			path = "第五章 二叉树";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +299,23 @@
 			productReference = 3D97BC451F6BB33F00A94B90 /* 第一章 绪论 */;
 			productType = "com.apple.product-type.tool";
 		};
+		3DC732E61F7BD72C00CAAC54 /* 第五章 二叉树 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DC732ED1F7BD72C00CAAC54 /* Build configuration list for PBXNativeTarget "第五章 二叉树" */;
+			buildPhases = (
+				3DC732E31F7BD72C00CAAC54 /* Sources */,
+				3DC732E41F7BD72C00CAAC54 /* Frameworks */,
+				3DC732E51F7BD72C00CAAC54 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "第五章 二叉树";
+			productName = "第五章 二叉树";
+			productReference = 3DC732E71F7BD72C00CAAC54 /* 第五章 二叉树 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,6 +345,10 @@
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
+					3DC732E61F7BD72C00CAAC54 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 3D97BC321F6BB32D00A94B90 /* Build configuration list for PBXProject "数据结构与算法" */;
@@ -318,6 +368,7 @@
 				3D40B66D1F70C4AB00A5C125 /* 第二章 向量 */,
 				3D7F71381F76777A008274A8 /* 第三章 列表 */,
 				3D94ADEC1F7A2FA900E484CB /* 第四章 栈与队列 */,
+				3DC732E61F7BD72C00CAAC54 /* 第五章 二叉树 */,
 			);
 		};
 /* End PBXProject section */
@@ -360,6 +411,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D97BC481F6BB33F00A94B90 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DC732E31F7BD72C00CAAC54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DC732EA1F7BD72C00CAAC54 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +624,40 @@
 			};
 			name = Release;
 		};
+		3DC732EB1F7BD72C00CAAC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3DC732EC1F7BD72C00CAAC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -618,6 +711,15 @@
 			buildConfigurations = (
 				3D97BC4A1F6BB33F00A94B90 /* Debug */,
 				3D97BC4B1F6BB33F00A94B90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DC732ED1F7BD72C00CAAC54 /* Build configuration list for PBXNativeTarget "第五章 二叉树" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DC732EB1F7BD72C00CAAC54 /* Debug */,
+				3DC732EC1F7BD72C00CAAC54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
