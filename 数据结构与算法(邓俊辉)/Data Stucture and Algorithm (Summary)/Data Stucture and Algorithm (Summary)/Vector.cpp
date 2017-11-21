@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include <assert.h>
 
 typedef int Rank;
 #define DEFAULT_CAPACITY 3
@@ -87,6 +88,11 @@ public:
     }
     
     // [] 运算符重载
+	T & operator [] (Rank r) const
+	{
+		assert(r < _size);
+		return _elem[r];
+	}
     
     // = 运算符重载
     
@@ -102,6 +108,11 @@ public:
         delete [] _elem;
         _elem = newElem;
     }
+	// 数据访问
+	T get( Rank r )
+	{
+		return _elem[r];
+	}
     
     // 增删改查
 };
