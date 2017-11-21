@@ -8,13 +8,16 @@
 
 #include <iostream>
 #include "Vector.cpp"
+#include "Utility.cpp"
+
+typedef Vector<int> VectorOfInt;
 
 int main(int argc, const char * argv[]) {
 	
-	
-	
-
-	
+    VectorOfInt v = VectorOfInt();
+    
+    
+    
     
     return 0;
 }
