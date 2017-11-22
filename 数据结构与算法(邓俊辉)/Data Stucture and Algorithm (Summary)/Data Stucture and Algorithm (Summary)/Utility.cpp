@@ -14,7 +14,7 @@ template <typename T>
 struct Increase {
     virtual void operator ()( T & e )
     {
-        return e++;
+        e++;
     }
 };
 
@@ -22,7 +22,7 @@ template <typename T>
 struct Visit {
     virtual void operator ()( T & e )
     {
-        return e;
+        e;
     }
 };
 

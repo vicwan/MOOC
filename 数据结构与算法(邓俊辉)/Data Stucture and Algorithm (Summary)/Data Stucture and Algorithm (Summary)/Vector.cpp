@@ -8,10 +8,16 @@
 
 #include <stdio.h>
 #include <assert.h>
+#include "Fibonacci/Fib.cpp"
+
+
 
 typedef int Rank;
 #define DEFAULT_CAPACITY 3
 
+
+
+// 规定 lo 和 hi 为左闭右开的区间, 即 [lo, hi)
 template <typename T>
 class Vector {
     // 当前向量的最大容量 capacity
@@ -174,6 +180,21 @@ public:
     {
         
     }
+	
+	// 有序向量的去重操作, 返回被删除元素的数目
+	int uniquify()
+	{
+		int i = 1, j = 0;	// i 为当前被考察元素的秩, j 为互异元素最后一个的秩
+		while (i < _size) {
+			if (_elem[j] != _elem[i]) {
+				_elem[++j] = _elem[i];
+			}
+			i++;
+		}
+		_size = ++j;		//  这里需要 ++j, 因为 i 为最后一个元素的秩 +1.
+		shrink();
+		return i - j;
+	}
 
 // 查
     // 无序向量的查找 find
@@ -188,9 +209,99 @@ public:
     void traverse( VST& visit )
     {
         for (int i = 0; i < _size; i++) {
-            
+			visit(_elem[i]);
         }
     }
-
+	void traverse1( T (*visit)(T&) )
+	{
+		for (int i = 0; i < _size; i++) {
+			visit(_elem[i]);
+		}
+	}
+	
+	// 二分查找
+	
+	// 此版本可以在 mi 命中时立即返回秩, 但每次循环要多一次比较过程.
+	// 有多个命中元素时，不能保证返回秩最大者；查找失败时，简单地返回-1，而不能指示失败的位置
+	static Rank search_binary_A( T* A, T const& e, Rank lo, Rank hi )
+	{
+		Rank mi;
+		while ( lo < hi ) {
+			mi = (lo + hi) >> 1;
+			if( e < A[mi] ) {
+				hi = mi;
+			}else if( e > A[mi] ){
+				lo = mi + 1;
+			}else {
+				return mi;
+			}
+		}
+		return -1;
+	}
+	
+	// 用以优化版本 A 的比较次数. 由于向右转向的成本更高, 需要两次比较.
+	static Rank search_fibonaccian( T* A, T const& e, Rank lo, Rank hi )
+	{
+		Rank mi;
+		Fib fib = Fib( hi - lo );
+		
+		while ( lo < hi ) {
+			while ( (hi - lo) < fib.get() ) {
+				fib.prev();
+			}
+			mi = lo + fib.get() - 1;
+			if( e < A[mi] ) {
+				hi = mi;
+			}else if( e > A[mi] ){
+				lo = mi + 1;
+			}else {
+				return mi;
+			}
+		}
+		return -1;
+	}
+	
+	// 此版本较版本 A 少一次比较过程, 但最好情况比版本 A 差很多. 因为必须等到向量规模缩小到 2 个元素的时候, 才能得到结果
+	// 有多个命中元素时，不能保证返回秩最大者；查找失败时，简单地返回-1，而不能指示失败的位置
+	static Rank search_binary_B( T* A, T const& e, Rank lo, Rank hi )
+	{
+		Rank mi;
+		while ( hi - lo > 1 ) {
+			mi = (lo + hi) >> 1;
+			if ( e < mi ) {
+				hi = mi;
+			}else {
+				lo = mi;
+			}
+		}
+		if ( A[lo] == e ) {
+			return lo;
+		}else {
+			return -1;
+		}
+	}
+	
+	static Rank search_binary_C( T* A, T const& e, Rank lo, Rank hi )
+	{
+		return 0;
+	}
+	
+	
+// 排序
+	
+	// 检查逆序对数量
+	int disordered() const
+	{
+		int count = 0;
+		for (int i = 1; i < _size; i++) {
+			if (_elem[i - 1] > _elem[i]) {
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	// 起泡排序
+	
 };
 

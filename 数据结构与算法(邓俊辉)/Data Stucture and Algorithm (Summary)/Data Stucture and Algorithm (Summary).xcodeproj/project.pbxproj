@@ -10,6 +10,7 @@
 		0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BB31FC3320900CEBDA3 /* main.cpp */; };
 		0D7E7BBF1FC3332100CEBDA3 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */; };
 		0D7E7BC11FC49AAC00CEBDA3 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */; };
+		3D8FA5131FC56C91002993A3 /* Fib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA5121FC56C91002993A3 /* Fib.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		0D7E7BB31FC3320900CEBDA3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
 		0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
+		3D8FA5121FC56C91002993A3 /* Fib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fib.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +63,20 @@
 		0D7E7BB21FC3320900CEBDA3 /* Data Stucture and Algorithm (Summary) */ = {
 			isa = PBXGroup;
 			children = (
+				3D8FA50F1FC56B64002993A3 /* Fibonacci */,
 				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
 				0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */,
 				0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */,
 			);
 			path = "Data Stucture and Algorithm (Summary)";
+			sourceTree = "<group>";
+		};
+		3D8FA50F1FC56B64002993A3 /* Fibonacci */ = {
+			isa = PBXGroup;
+			children = (
+				3D8FA5121FC56C91002993A3 /* Fib.cpp */,
+			);
+			path = Fibonacci;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D7E7BC11FC49AAC00CEBDA3 /* Utility.cpp in Sources */,
+				3D8FA5131FC56C91002993A3 /* Fib.cpp in Sources */,
 				0D7E7BBF1FC3332100CEBDA3 /* Vector.cpp in Sources */,
 				0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */,
 			);
