@@ -261,14 +261,14 @@ public:
 		return -1;
 	}
 	
-	// 此版本较版本 A 少一次比较过程, 但最好情况比版本 A 差很多. 因为必须等到向量规模缩小到 2 个元素的时候, 才能得到结果
+	// 此版本较版本 A 少一次比较过程, 但最好情况比版本 A 差很多. 因为必须等到减而治之缩小到 1 个元素的时候, 才能得到结果
 	// 有多个命中元素时，不能保证返回秩最大者；查找失败时，简单地返回-1，而不能指示失败的位置
 	static Rank search_binary_B( T* A, T const& e, Rank lo, Rank hi )
 	{
 		Rank mi;
 		while ( hi - lo > 1 ) {
 			mi = (lo + hi) >> 1;
-			if ( e < mi ) {
+			if ( e < A[mi] ) {
 				hi = mi;
 			}else {
 				lo = mi;
@@ -280,10 +280,20 @@ public:
 			return -1;
 		}
 	}
-	
+	// 这个版本可以完全符合预期的语义. 即有多个元素命中时, 返回秩最大者; 查找失败时, 返回小于 e 的最大元素位置
+	// 符合语义很难, 反正我没想出来... 很巧妙的算法, 仔细体会!
 	static Rank search_binary_C( T* A, T const& e, Rank lo, Rank hi )
 	{
-		return 0;
+		Rank mi;
+		while ( lo < hi) {
+			mi = (lo + hi) >> 1;
+			if ( e < A[mi] ) {
+				hi = mi;
+			}else {
+				lo = mi + 1;
+			}
+		}
+		return (lo - 1);
 	}
 	
 	
