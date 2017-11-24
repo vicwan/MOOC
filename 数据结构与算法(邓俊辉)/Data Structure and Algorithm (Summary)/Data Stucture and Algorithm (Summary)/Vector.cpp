@@ -406,7 +406,10 @@ public:
 	}
 	
 	// 归并排序
-	
+	void sort_merge( Rank lo, Rank hi )
+    {
+        
+    }
 	
 };
 

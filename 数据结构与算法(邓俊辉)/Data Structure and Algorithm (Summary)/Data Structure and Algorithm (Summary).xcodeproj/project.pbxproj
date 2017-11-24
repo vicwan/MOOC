@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D7E7BB01FC3320900CEBDA3 /* Data Stucture and Algorithm (Summary) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Stucture and Algorithm (Summary)"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D7E7BB01FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Structure and Algorithm (Summary)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7E7BB31FC3320900CEBDA3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
 		0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		0D7E7BB11FC3320900CEBDA3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D7E7BB01FC3320900CEBDA3 /* Data Stucture and Algorithm (Summary) */,
+				0D7E7BB01FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0D7E7BAF1FC3320900CEBDA3 /* Data Stucture and Algorithm (Summary) */ = {
+		0D7E7BAF1FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D7E7BB71FC3320900CEBDA3 /* Build configuration list for PBXNativeTarget "Data Stucture and Algorithm (Summary)" */;
+			buildConfigurationList = 0D7E7BB71FC3320900CEBDA3 /* Build configuration list for PBXNativeTarget "Data Structure and Algorithm (Summary)" */;
 			buildPhases = (
 				0D7E7BAC1FC3320900CEBDA3 /* Sources */,
 				0D7E7BAD1FC3320900CEBDA3 /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = "Data Stucture and Algorithm (Summary)";
+			name = "Data Structure and Algorithm (Summary)";
 			productName = "Data Stucture and Algorithm (Summary)";
-			productReference = 0D7E7BB01FC3320900CEBDA3 /* Data Stucture and Algorithm (Summary) */;
+			productReference = 0D7E7BB01FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0D7E7BAB1FC3320900CEBDA3 /* Build configuration list for PBXProject "Data Stucture and Algorithm (Summary)" */;
+			buildConfigurationList = 0D7E7BAB1FC3320900CEBDA3 /* Build configuration list for PBXProject "Data Structure and Algorithm (Summary)" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0D7E7BAF1FC3320900CEBDA3 /* Data Stucture and Algorithm (Summary) */,
+				0D7E7BAF1FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */,
 			);
 		};
 /* End PBXProject section */
@@ -270,7 +270,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D7E7BAB1FC3320900CEBDA3 /* Build configuration list for PBXProject "Data Stucture and Algorithm (Summary)" */ = {
+		0D7E7BAB1FC3320900CEBDA3 /* Build configuration list for PBXProject "Data Structure and Algorithm (Summary)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D7E7BB51FC3320900CEBDA3 /* Debug */,
@@ -279,7 +279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D7E7BB71FC3320900CEBDA3 /* Build configuration list for PBXNativeTarget "Data Stucture and Algorithm (Summary)" */ = {
+		0D7E7BB71FC3320900CEBDA3 /* Build configuration list for PBXNativeTarget "Data Structure and Algorithm (Summary)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D7E7BB81FC3320900CEBDA3 /* Debug */,
