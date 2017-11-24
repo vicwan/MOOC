@@ -10,20 +10,21 @@
 
 // 函数对象
 
-template <typename T>
-struct Increase {
-    virtual void operator ()( T & e )
-    {
-        e++;
-    }
-};
+//template <typename T>
+//struct Increase {
+//    virtual void operator ()( T & e )
+//    {
+//        e++;
+//    }
+//};
+//
+//template <typename T>
+//struct Visit {
+//    virtual void operator ()( T & e )
+//    {
+//        e;
+//    }
+//};
 
-template <typename T>
-struct Visit {
-    virtual void operator ()( T & e )
-    {
-        e;
-    }
-};
 
 

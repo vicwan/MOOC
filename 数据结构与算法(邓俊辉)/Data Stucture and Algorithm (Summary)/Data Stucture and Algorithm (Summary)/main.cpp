@@ -10,14 +10,17 @@
 #include "Vector.cpp"
 #include "Utility.cpp"
 
-typedef Vector<int> VectorOfInt;
+
 
 int main(int argc, const char * argv[]) {
 	
-    VectorOfInt v = VectorOfInt();
-    
-    
-    
-
+	
     return 0;
+}
+
+#pragma mark - 测试 Vector
+typedef Vector<int> VectorInt;
+void test_vector()
+{
+	
 }
