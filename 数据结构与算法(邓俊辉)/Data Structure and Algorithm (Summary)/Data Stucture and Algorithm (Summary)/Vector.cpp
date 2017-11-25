@@ -406,9 +406,48 @@ public:
 	}
 	
 	// 归并排序
+	void merge( Rank lo, Rank mi, Rank hi )
+	{
+		T* newElem = new T[(hi - lo) << 1];
+//		for (int i = lo, j = mi, k = 0; (i < mi || j < hi); k++) {
+//			if (i == (mi - 1)) {
+//				newElem[k] = _elem[j];
+//				j++;
+//				continue;
+//			}
+//			if (j == (hi - 1)) {
+//				newElem[k] = _elem[i];
+//				i++;
+//				continue;
+//			}
+//
+//			if (_elem[i] < _elem[j]) {
+//				newElem[k] = _elem[i];
+//				i++;
+//			}else {
+//				newElem[k] = _elem[j];
+//				j++;
+//			}
+//		}
+		int i = lo, j = mi, k = 0;
+		while (i < mi || j < hi) {
+			if (i ==( mi - 1 ) || _elem[j] < _elem[i] ) {
+				newElem[k++] = _elem[j++];
+			}
+			if (j ==( hi - 1 ) || _elem[i] <= _elem[j]) {
+				newElem[k++] = _elem[i++];
+			}
+		}
+		delete [] _elem;
+		_elem = newElem;
+	}
+	
 	void sort_merge( Rank lo, Rank hi )
     {
-        
+		Rank mi = (lo + hi) >> 1;
+		sort_merge(lo, mi);
+		sort_merge(mi, hi);
+		merge(lo, mi, hi);
     }
 	
 };

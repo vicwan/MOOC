@@ -22,5 +22,6 @@ int main(int argc, const char * argv[]) {
 typedef Vector<int> VectorInt;
 void test_vector()
 {
+	VectorInt v = VectorInt();
 	
 }

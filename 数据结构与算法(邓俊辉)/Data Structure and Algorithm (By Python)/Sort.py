@@ -3,6 +3,61 @@
 
 A = [12, 32, 2, 33, 9, 6, 56, 44, 13, 42, 12, 10]
 
+
+# Bubble Sort
+
+def bubble_slow( A, lo, hi ):
+	while lo < hi - 1:
+		if A[lo] > A[lo + 1]:
+			(A[lo], A[lo + 1]) = (A[lo + 1], A[lo])
+		lo += 1
+	return
+	
+def bubble_medium( A, lo, hi ):
+	isSorted = True
+	while lo < hi - 1:
+		if A[lo] > A[lo + 1]:
+			isSorted = False
+			(A[lo], A[lo + 1]) = (A[lo + 1], A[lo])
+		lo += 1
+	return isSorted
+	
+def bubble_fast( A, lo, hi ):
+	last = 0;
+	while lo < hi - 1:
+		if A[lo] > A[lo + 1]:
+			last = lo + 1
+			(A[lo], A[lo + 1]) = (A[lo + 1], A[lo])
+		lo += 1
+	return last
+
+
+def sort_bubble_slow( A, lo, hi ):
+	loopCount = 0;
+	while lo < hi:
+		loopCount += 1
+		bubble_slow(A, lo, hi)
+		hi -= 1
+	print(loopCount)
+
+def sort_bubble_medium( A, lo, hi ):
+	isSorted = False
+	loopCount = 0;
+	while isSorted == False:
+		loopCount += 1
+		isSorted = bubble_medium(A, lo, hi)
+		hi -= 1
+	print(loopCount)
+
+def sort_bubble_fast( A, lo, hi ):
+	loopCount = 0;
+	while (lo < hi):
+		loopCount += 1
+		hi = bubble_fast(A, lo, hi)
+	print(loopCount)
+
+
+
 # Merge Sort
 def merge(a, b):	# 合并两个有序数组的方法
 	c = []
