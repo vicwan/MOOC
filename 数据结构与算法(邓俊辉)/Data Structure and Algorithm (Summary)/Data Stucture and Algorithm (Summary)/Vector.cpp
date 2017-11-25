@@ -10,6 +10,7 @@
 #include <assert.h>
 #include "Fibonacci/Fib.cpp"
 #include "Utility.cpp"
+#include <stdlib.h>"
 
 
 typedef int Rank;
@@ -92,10 +93,10 @@ public:
 
 #pragma mark - 析构函数
 // 析构函数
-    ~Vector()
-    {
-        delete [] _elem;
-    }
+//    ~Vector()
+//    {
+//        delete [] _elem;
+//    }
 	
 #pragma mark - 运算符重载
 	// [] 运算符重载
@@ -106,6 +107,17 @@ public:
 	}
     
 	// = 运算符重载
+    Vector<T>& operator = (Vector<T> const& V)
+    {
+        _capacity = V._capacity;
+        _elem = new T[_capacity];
+        _size = V._size;
+        Rank i = 0;
+        while (i < _size) {
+            _elem[i] = V._elem[i++];
+        }
+        return this;
+    }
 	
 #pragma mark - 扩容, 缩容
 // 扩容操作
@@ -117,7 +129,7 @@ public:
         for (int i = 0; i < _size; i++) {
             newElem[i] = _elem[i];
         }
-        delete [] _elem;
+//        delete [] _elem;
         _elem = newElem;
     }
 // 缩容操作
@@ -135,16 +147,20 @@ public:
         for (int i = 0; i < _size; i++) {
             newElem[i] = _elem[i];
         }
-        delete [] _elem;
+//        delete [] _elem;
         _elem = newElem;
         
     }
 #pragma mark - 数据访问
 // 数据访问
-	T get( Rank r )
+	T get( Rank r ) const
 	{
 		return _elem[r];
 	}
+    Rank size() const
+    {
+        return _size;
+    }
     
 // 增删改查
 #pragma mark - 增删改查
@@ -162,6 +178,14 @@ public:
         _elem[r] = e;
         _size++;
         return r;
+    }
+    
+    // 在向量的末尾添加元素 e
+    void append( T const& e )
+    {
+        expand();
+        _elem[_size] = e;
+        _size++;
     }
 	
 #pragma mark  删除相关
@@ -318,12 +342,10 @@ public:
 #pragma mark  排序
 // 排序
 	
-	void swap( T& a, T& b ) {
-		&a = &a ^ &b;
-		&b = &a ^ &b;
-		&a = &a ^ &b;
-	}
-	
+    void swap( T& a, T& b ) {
+        T c(a); a=b; b=c;
+    }
+    
 	// 检查逆序对数量
 	int disordered() const
 	{
@@ -339,12 +361,17 @@ public:
 	// 起泡排序龟速版 -- 最简单粗暴的方式, 没有对扫描区域做任何地扫描优化,
 	void bubble_scan_slow( Rank lo, Rank hi )
 	{
-		while (lo < hi - 1) {
-			if (_elem[lo] > _elem[lo + 1]) {
-				swap(_elem[lo], _elem[lo + 1]);
-			}
-			lo++;
-		}
+//        for (int i = 1; i < hi - lo; i++) {
+//            if (_elem[i - 1] > _elem[i]) {
+//                swap(_elem[i - 1], _elem[i]);
+//            }
+//        }
+        while (lo < hi - 1) {
+            if (_elem[lo] > _elem[lo + 1]) {
+                swap(_elem[lo], _elem[lo + 1]);
+            }
+            lo++;
+        }
 	}
 	
 	void sort_bubble_slow( Rank lo, Rank hi )
@@ -355,22 +382,22 @@ public:
 		}
 	}
 	
-	
 	// 起泡排序
 	// 单次对未排序区间的扫描, 返回这个区间是否已经排序的布尔值
 	bool bubble_scan( Rank lo, Rank hi )
 	{
-		bool isSorted = true;
-		while (lo < hi - 1) {
-			if (_elem[lo] > _elem[lo + 1]) {
-				/*
-				 只要出现一次交换, 即可判定----此次 scan 的未排序区间在 scan 结束后依然有未完全排序的可能
-				 所以将排序标志返回 false 出去, 请求调用者继续对未排序区间进行扫描排序
-				 */
-				isSorted = false;
-				swap(_elem[lo], _elem[lo + 1]);
-			}
-		}
+        bool isSorted = true;
+        
+        for (int i = 1; i < hi - lo; i++) {
+            if (_elem[i - 1] > _elem[i]) {
+                /*
+                 只要出现一次交换, 即可判定----此次 scan 的未排序区间在 scan 结束后依然有未完全排序的可能
+                 所以将排序标志返回 false 出去, 请求调用者继续对未排序区间进行扫描排序
+                 */
+                isSorted = false;
+                swap(_elem[i - 1], _elem[i]);
+            }
+        }
 		return isSorted;
 	}
 	
@@ -386,64 +413,77 @@ public:
 	}
 	
 	// 起泡排序快速版 (比👆版本更早结束对已排序区段元素的扫描)
-	bool bubble_scan_fast( Rank lo, Rank hi )
+	Rank bubble_scan_fast( Rank lo, Rank hi )
 	{
 		Rank last = lo;
-		while (lo < hi - 1) {
-			if (_elem[lo] > _elem[lo + 1]) {
-				swap(_elem[lo], _elem[lo + 1]);
-				last = lo + 1;
-			}
-		}
+        
+        for (int i = 1; i < hi - lo; i++) {
+            if (_elem[i - 1] > _elem[i]) {
+                swap(_elem[i - 1], _elem[i]);
+                last = i;
+            }
+        }
 		return last;
 	}
 	
-	bool sort_bubble_fast( Rank lo, Rank hi )
+	void sort_bubble_fast( Rank lo, Rank hi )
 	{
 		while (lo < hi) {
 			hi = bubble_scan_fast(lo, hi);
 		}
 	}
 	
-	// 归并排序
+	// 归并排序 
 	void merge( Rank lo, Rank mi, Rank hi )
 	{
-		T* newElem = new T[(hi - lo) << 1];
-//		for (int i = lo, j = mi, k = 0; (i < mi || j < hi); k++) {
-//			if (i == (mi - 1)) {
-//				newElem[k] = _elem[j];
-//				j++;
-//				continue;
-//			}
-//			if (j == (hi - 1)) {
-//				newElem[k] = _elem[i];
-//				i++;
-//				continue;
-//			}
-//
-//			if (_elem[i] < _elem[j]) {
-//				newElem[k] = _elem[i];
-//				i++;
-//			}else {
-//				newElem[k] = _elem[j];
-//				j++;
-//			}
-//		}
-		int i = lo, j = mi, k = 0;
-		while (i < mi || j < hi) {
-			if (i ==( mi - 1 ) || _elem[j] < _elem[i] ) {
-				newElem[k++] = _elem[j++];
-			}
-			if (j ==( hi - 1 ) || _elem[i] <= _elem[j]) {
-				newElem[k++] = _elem[i++];
-			}
-		}
-		delete [] _elem;
-		_elem = newElem;
+        // 构造数组 A, B, C
+        T* A = _elem + lo;
+        int lb = mi - lo;   T* B = new T[lb];
+        int lc = hi - mi;   T* C = _elem + mi;
+        // 对数组 B 进行赋值
+        for (Rank i = 0; i < lb; i++) {
+            B[i] = A[i];
+        }
+        // 主算法 -- 精简版
+        for (Rank i = 0, j = 0 , k = 0; j < lb ;) {
+            if ( lc <= k || B[j] <= C[k] ) {
+                A[i++] = B[j++];
+            }
+            if ( k < lc && C[k] < B[j] ) {
+                A[i++] = C[k++];
+            }
+            // 邓俊辉老师版本上写, 两个判断语句的顺序要交换?
+        }
+//        // 冗余版主算法
+//        for (Rank i = 0, j = 0 , k = 0; ( j < lb || k < lc );) {
+//            // 判断中的 j < lb 的作用是, 确定 B[j] 确实为一个合法的元素, 而不越界
+//            if ( (j < lb) && (lc <= k || B[j] < C[k]) ) {
+//                A[i++] = B[j++];
+//            }
+//            if ( (k < lc) && (lb <= j || C[k] <= B[j]) ) {
+//                A[i++] = C[k++];
+//            }
+//        }
+        
+        
+//        int i = lo, j = mi, k = 0;
+//        while (i < mi || j < hi) {
+//            if (i ==( mi - 1 ) || _elem[j] < _elem[i] ) {
+//                newElem[k++] = _elem[j++];
+//            }
+//            if (j ==( hi - 1 ) || _elem[i] <= _elem[j]) {
+//                newElem[k++] = _elem[i++];
+//            }
+//        }
+//        delete [] _elem;
+//        _elem = newElem;
 	}
 	
 	void sort_merge( Rank lo, Rank hi )
     {
+        if (hi - lo < 2) {
+            return;
+        }
 		Rank mi = (lo + hi) >> 1;
 		sort_merge(lo, mi);
 		sort_merge(mi, hi);
