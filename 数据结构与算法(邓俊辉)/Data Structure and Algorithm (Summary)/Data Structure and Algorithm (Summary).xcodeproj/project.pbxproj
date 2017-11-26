@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4992EC1FCB1AD600344529 /* List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4992EB1FCB1AD600344529 /* List.cpp */; };
 		0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BB31FC3320900CEBDA3 /* main.cpp */; };
 		0D7E7BC11FC49AAC00CEBDA3 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */; };
 		0DE5C5A51FC99ECA003FA9E8 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D4992EB1FCB1AD600344529 /* List.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = List.cpp; sourceTree = "<group>"; };
 		0D7E7BB01FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Structure and Algorithm (Summary)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7E7BB31FC3320900CEBDA3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
 				0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */,
 				0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */,
+				0D4992EB1FCB1AD600344529 /* List.cpp */,
 			);
 			path = "Data Stucture and Algorithm (Summary)";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				3D8FA5131FC56C91002993A3 /* Fib.cpp in Sources */,
 				0DE5C5A51FC99ECA003FA9E8 /* Vector.cpp in Sources */,
 				0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */,
+				0D4992EC1FCB1AD600344529 /* List.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
