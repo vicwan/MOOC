@@ -20,12 +20,12 @@ struct ListNode {       // 双向列表
     T _data;          // 数据域
     ListNodePosi(T) _pred;    // Predecessor
     ListNodePosi(T) _succ;    // Successor
+
+#pragma mark - 对外接口
     
-    //
-    ListNode()
-    {
-        
-    }
+public:
+    // 构建 header 和 trailer
+    ListNode() {}
     
     // 默认构造器
     ListNode( T data, ListNodePosi(T) pred = NULL, ListNodePosi(T) succ = NULL) : _data(data), _pred(pred), _succ(succ)  {}
