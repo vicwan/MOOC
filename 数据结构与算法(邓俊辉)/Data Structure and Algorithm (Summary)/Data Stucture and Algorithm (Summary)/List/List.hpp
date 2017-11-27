@@ -177,9 +177,22 @@ public:
 		
 		return node;
 	}
+#pragma mark 删
+	T remove( ListNodePosi(T) p )
+	{
+		T e = p->_data;
+		
+		p->_pred->_succ = p->_succ;
+		p->_succ->_pred = p->_pred;
+		
+		p = nullptr;
+		return e;
+	}
+	
+#pragma mark 改
 	
 	
-#pragma mark - 查
+#pragma mark 查
 	
 };
 
