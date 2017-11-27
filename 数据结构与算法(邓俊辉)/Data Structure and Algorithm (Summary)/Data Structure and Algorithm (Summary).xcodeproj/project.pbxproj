@@ -10,7 +10,6 @@
 		0D4992EC1FCB1AD600344529 /* List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4992EB1FCB1AD600344529 /* List.cpp */; };
 		0D4992EF1FCB1FCA00344529 /* ListNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4992EE1FCB1FCA00344529 /* ListNode.cpp */; };
 		0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BB31FC3320900CEBDA3 /* main.cpp */; };
-		0D7E7BC11FC49AAC00CEBDA3 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */; };
 		0DE5C5A51FC99ECA003FA9E8 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */; };
 		3D8FA5131FC56C91002993A3 /* Fib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA5121FC56C91002993A3 /* Fib.cpp */; };
 /* End PBXBuildFile section */
@@ -33,7 +32,6 @@
 		0D7E7BB01FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Structure and Algorithm (Summary)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7E7BB31FC3320900CEBDA3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
-		0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		3D8FA5121FC56C91002993A3 /* Fib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fib.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,11 +74,10 @@
 		0D7E7BB21FC3320900CEBDA3 /* Data Stucture and Algorithm (Summary) */ = {
 			isa = PBXGroup;
 			children = (
+				3DC3A47E1FCB99C0003DD2BD /* Vector */,
 				0D4992ED1FCB1FAB00344529 /* List */,
 				3D8FA50F1FC56B64002993A3 /* Fibonacci */,
 				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
-				0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */,
-				0D7E7BC01FC49AAC00CEBDA3 /* Utility.cpp */,
 			);
 			path = "Data Stucture and Algorithm (Summary)";
 			sourceTree = "<group>";
@@ -91,6 +88,14 @@
 				3D8FA5121FC56C91002993A3 /* Fib.cpp */,
 			);
 			path = Fibonacci;
+			sourceTree = "<group>";
+		};
+		3DC3A47E1FCB99C0003DD2BD /* Vector */ = {
+			isa = PBXGroup;
+			children = (
+				0D7E7BBE1FC3332100CEBDA3 /* Vector.cpp */,
+			);
+			path = Vector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +155,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D7E7BC11FC49AAC00CEBDA3 /* Utility.cpp in Sources */,
 				3D8FA5131FC56C91002993A3 /* Fib.cpp in Sources */,
 				0DE5C5A51FC99ECA003FA9E8 /* Vector.cpp in Sources */,
 				0D4992EF1FCB1FCA00344529 /* ListNode.cpp in Sources */,
