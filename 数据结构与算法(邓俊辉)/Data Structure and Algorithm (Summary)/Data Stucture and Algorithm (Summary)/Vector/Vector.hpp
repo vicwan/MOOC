@@ -103,7 +103,7 @@ public:
 	
 #pragma mark - 运算符重载
 	// [] 运算符重载
-	T & operator [] (Rank r) const
+	inline T & operator [] (Rank r) const
 	{
 		assert(r < _size);
 		return _elem[r];
@@ -156,11 +156,11 @@ public:
 	}
 #pragma mark - 数据访问
 	// 数据访问
-	T get( Rank r ) const
+	inline T get( Rank r ) const
 	{
 		return _elem[r];
 	}
-	Rank size() const
+	inline Rank size() const
 	{
 		return _size;
 	}

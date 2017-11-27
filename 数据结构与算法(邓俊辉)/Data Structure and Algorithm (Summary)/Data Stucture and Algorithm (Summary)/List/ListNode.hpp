@@ -12,8 +12,6 @@
 
 #define ListNodePosi(T) ListNode<T>*
 
-typedef int Rank;
-
 template <typename T>
 struct ListNode {			// 双向列表
 	
@@ -29,11 +27,27 @@ public:
 	ListNode() {}
 	
 	// 默认构造器
-	ListNode( T data, ListNodePosi(T) pred = NULL, ListNodePosi(T) succ = NULL) : _data(data), _pred(pred), _succ(succ)  {}
+	ListNode( T data, ListNodePosi(T) pred = nullptr, ListNodePosi(T) succ = nullptr) : _data(data), _pred(pred), _succ(succ)  {}
 	
 	
-	ListNodePosi(T) insertAsPred( T const& e );	// 紧随当前节点之前插入节点
-	ListNodePosi(T) insertAsSucc( T const& e );	// 紧随当前节点之后插入节点
+	ListNodePosi(T) insertAsPred( T const& e )	// 紧随当前节点之前插入节点
+	{
+		ListNodePosi(T) node = new ListNode<T>(e);
+		node->_pred = _pred;
+		node->_succ = this;
+		_pred = node;
+		
+		return node;
+	}
+	ListNodePosi(T) insertAsSucc( T const& e )	// 紧随当前节点之后插入节点
+	{
+		ListNodePosi(T) node = new ListNode(e);
+		node->_succ = _succ;
+		node->_pred = this;
+		_succ = node;
+		
+		return node;
+	}
 };
 
 

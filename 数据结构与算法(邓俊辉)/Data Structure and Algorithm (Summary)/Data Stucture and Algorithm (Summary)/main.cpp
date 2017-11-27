@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "Vector.hpp"
+#include "List.hpp"
 
 
 using namespace std;
@@ -15,7 +16,7 @@ using namespace std;
 
 #pragma mark - 函数声明
 void test_vector();
-
+void test_list();
 
 
 #pragma mark - Main 函数
@@ -23,6 +24,7 @@ int main(int argc, const char * argv[]) {
 	
     
     test_vector();
+//	test_list();
 	
     return 0;
 }
@@ -52,13 +54,42 @@ void test_vector()
     v.sort_merge(0, v.size());
     for (int i = 0; i < v.size(); i++) {
         cout << v[i] << "  ";
-    }
-    cout << endl;
-    
+		
+	}
+	cout << "\n考察复制构造函数:" << endl;
+	VectorInt v1 = v;
+	for (int i = 0; i < v.size(); i++) {
+		cout << v1[i] << "  ";
+	}
+	cout << endl;
+
+	cout << "复制构造函数:" << endl;
+	int a[5] = {1, 2, 3, 4, 5};
+	VectorInt v2 = Vector<int>(a, 0, 3);
+	for (int i = 0; i < v2.size(); i++) {
+		cout << v2[i] << "  ";
+	}
+	cout << endl;
 }
 
 #pragma mark - 测试 List
-void  test_List()
+typedef List<int> ListInt;
+void  test_list()
 {
-	
+	ListInt list = ListInt();
+	for (int i = 0; i < 5; i++) {
+		int e = arc4random_uniform(100);
+		list.append(e);
+	}
+
+//	for (int i = 0; i < list.size(); i++) {
+//		cout << list[i] << "  ";
+//	}
+//	list.insert(3, 10000);
+//	cout << endl;
+//	for (int i = 0; i < list.size(); i++) {
+//		cout << list[i] << "  ";
+//	}
+//	cout << endl;
+//	cout << "是否为空:" << list.empty() << endl;
 }

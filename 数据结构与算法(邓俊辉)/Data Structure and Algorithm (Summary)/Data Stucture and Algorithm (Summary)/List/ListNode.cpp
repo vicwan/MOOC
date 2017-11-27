@@ -9,22 +9,23 @@
 #include "ListNode.hpp"
 
 
-template <typename T>
-ListNodePosi(T) ListNode<T>::insertAsPred( T const& e ) {
-	ListNodePosi(T) node = new ListNode<T>(e);
-	node->_pred = _pred;
-	node->_succ = this;
-	_pred = node;
-	
-	return node;
-}
+//template <typename T>
+//ListNodePosi(T) ListNode<T>::insertAsPred( T const& e ) {
+//	ListNodePosi(T) node = new ListNode<T>(e);
+//	node->_pred = _pred;
+//	node->_succ = this;
+//	_pred = node;
+//	
+//	return node;
+//}
+//
+//template <typename T>
+//ListNodePosi(T) ListNode<T>::insertAsSucc( T const& e ) {
+//	ListNodePosi(T) node = new ListNode(e);
+//	node->_succ = _succ;
+//	node->_pred = this;
+//	_succ = node;
+//	
+//	return node;
+//}
 
-template <typename T>
-ListNodePosi(T) ListNode<T>::insertAsSucc( T const& e ) {
-	ListNodePosi(T) node = new ListNode(e);
-	node->_succ = _succ;
-	node->_pred = this;
-	_succ = node;
-	
-	return node;
-}
