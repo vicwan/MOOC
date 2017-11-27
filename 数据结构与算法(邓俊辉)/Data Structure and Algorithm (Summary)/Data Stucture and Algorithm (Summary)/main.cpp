@@ -23,8 +23,8 @@ void test_list();
 int main(int argc, const char * argv[]) {
 	
     
-    test_vector();
-//	test_list();
+//    test_vector();
+    test_list();
 	
     return 0;
 }
@@ -82,14 +82,14 @@ void  test_list()
 		list.append(e);
 	}
 
-//	for (int i = 0; i < list.size(); i++) {
-//		cout << list[i] << "  ";
-//	}
-//	list.insert(3, 10000);
-//	cout << endl;
-//	for (int i = 0; i < list.size(); i++) {
-//		cout << list[i] << "  ";
-//	}
-//	cout << endl;
-//	cout << "是否为空:" << list.empty() << endl;
+    for (int i = 0; i < list.size(); i++) {
+        cout << list[i] << "  ";
+    }
+    list.insert(3, 10000);
+    cout << endl;
+    for (int i = 0; i < list.size(); i++) {
+        cout << list[i] << "  ";
+    }
+    cout << endl;
+    cout << "是否为空:" << list.empty() << endl;
 }

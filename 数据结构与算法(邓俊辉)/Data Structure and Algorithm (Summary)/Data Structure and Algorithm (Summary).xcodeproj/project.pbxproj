@@ -10,10 +10,6 @@
 		0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BB31FC3320900CEBDA3 /* main.cpp */; };
 		3D3D8F141FCBA76500E979C1 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8F121FCBA76500E979C1 /* Vector.cpp */; };
 		3D3D8F161FCBA79B00E979C1 /* Fib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8F151FCBA79B00E979C1 /* Fib.cpp */; };
-		3D3D8F171FCC115600E979C1 /* Fib.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8F101FCBA70500E979C1 /* Fib.hpp */; };
-		3D3D8F181FCC115600E979C1 /* Vector.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8F131FCBA76500E979C1 /* Vector.hpp */; };
-		3D3D8F191FCC115600E979C1 /* List.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3A4851FCBA4B8003DD2BD /* List.hpp */; };
-		3D3D8F1A1FCC115600E979C1 /* ListNode.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3A4821FCB9C74003DD2BD /* ListNode.hpp */; };
 		3DC3A4831FCB9C74003DD2BD /* ListNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3A4811FCB9C74003DD2BD /* ListNode.cpp */; };
 		3DC3A4861FCBA4B8003DD2BD /* List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3A4841FCBA4B8003DD2BD /* List.cpp */; };
 /* End PBXBuildFile section */
@@ -167,10 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3D8F171FCC115600E979C1 /* Fib.hpp in Sources */,
-				3D3D8F181FCC115600E979C1 /* Vector.hpp in Sources */,
-				3D3D8F191FCC115600E979C1 /* List.hpp in Sources */,
-				3D3D8F1A1FCC115600E979C1 /* ListNode.hpp in Sources */,
 				3DC3A4831FCB9C74003DD2BD /* ListNode.cpp in Sources */,
 				0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */,
 				3D3D8F161FCBA79B00E979C1 /* Fib.cpp in Sources */,

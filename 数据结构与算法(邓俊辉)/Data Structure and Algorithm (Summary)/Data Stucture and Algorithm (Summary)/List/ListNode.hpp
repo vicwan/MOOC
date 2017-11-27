@@ -35,6 +35,7 @@ public:
 		ListNodePosi(T) node = new ListNode<T>(e);
 		node->_pred = _pred;
 		node->_succ = this;
+        node->_pred->_succ = node;
 		_pred = node;
 		
 		return node;
@@ -44,6 +45,7 @@ public:
 		ListNodePosi(T) node = new ListNode(e);
 		node->_succ = _succ;
 		node->_pred = this;
+        node->_succ->_pred = node;
 		_succ = node;
 		
 		return node;

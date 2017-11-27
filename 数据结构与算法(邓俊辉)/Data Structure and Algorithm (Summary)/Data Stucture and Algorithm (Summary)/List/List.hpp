@@ -117,17 +117,7 @@ public:
 #pragma mark 增
 	Rank insert( Rank r, T const& e )	// 向秩为 r 的位置插入一个元素
 	{
-		_size++;
-
-//		ListNodePosi(T) node = new ListNode<T>(e);
-//		ListNodePosi(T) predNode = getNode(r)->_pred ;
-//
-//		node->_pred = predNode;
-//		node->_succ = predNode->_succ;
-//		node->_succ->_pred = node;
-//		predNode->_succ = node;
 		insertBefore(getNode(r), e);
-		
 		return r;
 	}
 	
@@ -150,14 +140,9 @@ public:
 	// 将元素 e 插入列表, 使之成为列表的首元素
 	ListNodePosi(T) insertAsFirst( T const& e )
 	{
-		_size++;
 		ListNodePosi(T) node = new ListNode<T>();
 		node->_data = e;
 		
-//		node->_pred = _header;
-//		node->_succ = _header->_succ;
-//		node->_succ->_pred = node;
-//		_header->_succ = node;
 		insertAfter(_header, e);
 		
 		return node;
@@ -165,18 +150,14 @@ public:
 	// 将元素 e 插入列表, 使之成为列表的末元素
 	ListNodePosi(T) insertAsLast( T const& e )
 	{
-		_size++;
 		ListNodePosi(T) node = new ListNode<T>();
 		node->_data = e;
-		
-//		node->_pred = _trailer->_pred;
-//		node->_succ = _trailer;
-//		node->_pred->_succ = node;
-//		_trailer->_pred = node;
+        
 		insertBefore(_trailer, e);
 		
 		return node;
 	}
+    
 #pragma mark 删
 	T remove( ListNodePosi(T) p )
 	{
@@ -193,6 +174,16 @@ public:
 	
 	
 #pragma mark 查
+    ListNodePosi(T) find( T const& e, int n, ListNodePosi(T) p )
+    {
+        while( 0 < n-- ) {
+            p = p->_pred;
+            if( p->_data == e ) {
+                return p;
+            }
+        }
+        return nullptr;
+    }
 	
 };
 
