@@ -167,14 +167,57 @@ public:
 		p->_succ->_pred = p->_pred;
 		
 		p = nullptr;
+		_size--;
 		return e;
 	}
 	
-#pragma mark 改
+	// 无序列表的唯一化, 返回被删除元素的个数
+	int deduplicate()
+	{
+		// 如果为平凡列表, return
+		if (_size < 2) {
+			return 0;
+		}
+		int oldSize = _size;
+		ListNodePosi(T) currNode = _header;
+		
+		for (int i = 0; i < oldSize; i++) {
+			currNode = currNode->_succ;
+			T e = currNode->_data;
+			ListNodePosi(T) dupNode = find(e, i, currNode);
+			if (dupNode) {
+				remove(dupNode);
+			}
+		}
+		return oldSize - _size;
+	}
 	
+	// 有序列表的唯一化
+	int uniquify()
+	{
+		if (_size < 2) {
+			return 0;
+		}
+		ListNodePosi(T) p = first();
+		ListNodePosi(T) q = p->_succ;
+		int oldSize = _size;
+		
+		while (q != _trailer) {
+			if ( p->_data != q->_data ) {
+				p = q;
+			}else {
+				remove(q);
+			}
+			q = p->_succ;
+		}
+		return oldSize - _size;
+	}
+	
+#pragma mark 改
+
 	
 #pragma mark 查
-    ListNodePosi(T) find( T const& e, int n, ListNodePosi(T) p )
+    ListNodePosi(T) find( T const& e, int n, ListNodePosi(T) p ) const
     {
         while( 0 < n-- ) {
             p = p->_pred;
@@ -184,6 +227,11 @@ public:
         }
         return nullptr;
     }
+	
+	
+#pragma mark - 排序
+	// 选择排序
+	
 	
 };
 

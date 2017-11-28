@@ -23,8 +23,8 @@ void test_list();
 int main(int argc, const char * argv[]) {
 	
     
-//    test_vector();
-    test_list();
+    test_vector();
+//    test_list();
 	
     return 0;
 }
@@ -54,8 +54,13 @@ void test_vector()
     v.sort_merge(0, v.size());
     for (int i = 0; i < v.size(); i++) {
         cout << v[i] << "  ";
-		
 	}
+	int removed = v.uniquify();
+	cout << "考察有序列表的唯一化:" << "移除了:" << removed << endl;
+	for (int i = 0; i < v.size(); i++) {
+		cout << v[i] << "  ";
+	}
+	
 	cout << "\n考察复制构造函数:" << endl;
 	VectorInt v1 = v;
 	for (int i = 0; i < v.size(); i++) {
@@ -70,14 +75,18 @@ void test_vector()
 		cout << v2[i] << "  ";
 	}
 	cout << endl;
+	
+	
+	
 }
 
 #pragma mark - 测试 List
+#define DEFAULT_LIST_SIZE 10
 typedef List<int> ListInt;
 void  test_list()
 {
 	ListInt list = ListInt();
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < DEFAULT_LIST_SIZE; i++) {
 		int e = arc4random_uniform(100);
 		list.append(e);
 	}
@@ -92,4 +101,11 @@ void  test_list()
     }
     cout << endl;
     cout << "是否为空:" << list.empty() << endl;
+
+	int removed = list.deduplicate();
+	cout << "测试 deduplicate. " << "删除了: " << removed << "个元素" << endl;
+	for (int i = 0; i < list.size(); i++) {
+		cout << list[i] << "  ";
+	}
+	
 }
