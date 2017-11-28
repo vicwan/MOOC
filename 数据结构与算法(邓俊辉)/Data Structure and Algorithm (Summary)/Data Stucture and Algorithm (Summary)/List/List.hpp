@@ -217,9 +217,12 @@ public:
 
 	
 #pragma mark 查
+	/*
+	 在节点 p 的 n 个真前驱中, 查找包含元素 e 的节点
+	 */
     ListNodePosi(T) find( T const& e, int n, ListNodePosi(T) p ) const
     {
-        while( 0 < n-- ) {
+        while (0 < n--) {
             p = p->_pred;
             if( p->_data == e ) {
                 return p;
@@ -227,10 +230,53 @@ public:
         }
         return nullptr;
     }
-	
+	/*
+	 从起始于位置 p 的 n 个元素中选出最大者
+	 */
+	ListNodePosi(T) selectMax( ListNodePosi(T) p, int n ) const
+	{
+		if( n < 2 ) {
+			return p;
+		}
+		ListNodePosi(T) max = p;
+		while ( (0 < n--) && (p != _trailer) ) {
+			p = p->_succ;
+			if( max->_data < p->_data ) {
+				max = p;
+			}
+		}
+		return max;
+	}
 	
 #pragma mark - 排序
-	// 选择排序
+	
+	/*
+	 选择排序
+	 接口语义: 对列表中起始于位置 p 的连续 n 个元素做选择排序
+	 */
+	void sort_selection( ListNodePosi(T) p, int n )
+	{
+		if( n < 2 ) {
+			return p;
+		}
+		// 设置待排区间 ( head, tail )
+		ListNodePosi(T) head = p->_pred;
+		ListNodePosi(T) tail = p;
+		while (0 < n--) {
+			tail = tail->_succ;
+		}
+		
+		while ( 1 < n-- ) {
+			// 遍历乱序区域, 找到最大的
+			ListNodePosi(T) max = selectMax(p, n);
+			// 如果已在有序部分的最前端, 则无需移动
+			if (max != tail->_pred) {
+				// 交换 max 和 tail 之前一个节点的数据域
+				swap(max->_data, tail->_pred->_data);
+			}
+			tail = tail->_pred;
+		}
+	}
 	
 	
 };
