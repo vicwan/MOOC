@@ -107,8 +107,8 @@ void  test_list()
 //	for (int i = 0; i < list.size(); i++) {
 //		cout << list[i] << "  ";
 //	}
-	cout << "选择排序:" << endl;
-	list.sort_selection(list.first(), list.size());
+//	cout << "选择排序:" << endl;		list.sort_selection(list.first(), list.size());
+	cout << "插入排序:" << endl;		list.sort_insertion(list.first(), list.size());
 	for (int i = 0; i < list.size(); i++) {
 		cout << list[i] << "  ";
 	}

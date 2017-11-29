@@ -230,6 +230,19 @@ public:
         }
         return nullptr;
     }
+	
+	/*
+	 在节点 p 的 n 个真前驱中, 找到不大于元素 e 的最后者
+	 */
+	ListNodePosi(T) search( T const& e, int n, ListNodePosi(T) p ) const
+	{
+		do {
+			p = p->_pred;
+			n--;
+		}while ( (e < p->_data ) && (-1 < n) );
+		return p;
+	}
+	
 	/*
 	 从起始于位置 p 的 n 个元素中选出最大者
 	 */
@@ -247,7 +260,12 @@ public:
 //			n--;
 //		}
 		for ( ListNodePosi(T) cur = p; 1 < n; n-- ) {
-			if( ( (cur = cur->_succ) ->_data) >= (max->_data)) {
+			/*
+			 这里的大于等于的判断很精髓. 因为在选择排序中, max 元素会被优先移到 sorted 部分.
+			 所以在有多个 _data 相等的情况下, 最右边的元素最先移入 sorted 部分.
+			 从而保证排序算法的稳定性.
+			 */
+			if( ((cur = cur->_succ) ->_data) >= (max->_data) ) {
 				max = cur;
 			}
 		}
@@ -295,6 +313,20 @@ public:
 //			tail = tail->_pred;
 //			n--;
 //		}
+	}
+	
+	
+	/*
+	 插入排序
+	 接口语义: 对列表中起始于位置 p 的连续 n 个元素做选择排序
+	 */
+	void sort_insertion( ListNodePosi(T) p, int n )
+	{
+		for (int i = 0; i < n; i++) {
+			insertAfter(search(p->_data, i, p), p->_data);
+			p = p->_succ;
+			remove(p->_pred);
+		}
 	}
 };
 
