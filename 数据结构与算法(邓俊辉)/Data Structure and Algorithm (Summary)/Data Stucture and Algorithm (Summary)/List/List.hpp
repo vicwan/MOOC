@@ -26,7 +26,8 @@ class List {
 	ListNodePosi(T)	_trailer;
 	
 	
-#pragma mark - 私有方法
+#pragma mark - 对外接口
+public:
 	ListNodePosi(T) first()	// 取首元素
 	{
 		assert(_size > 0);
@@ -60,8 +61,7 @@ class List {
 		return p;
 	}
 
-#pragma mark - 对外接口
-public:
+
 	// 构造函数. 构造一个空列表, 仅包含头(header)尾(trailer)元素
 	void init()
 	{
@@ -239,16 +239,25 @@ public:
 			return p;
 		}
 		ListNodePosi(T) max = p;
-		while ( (0 < n--) && (p != _trailer) ) {
-			p = p->_succ;
-			if( max->_data < p->_data ) {
-				max = p;
+//		while ( (1 < n) && (p != _trailer) ) {
+//			if( max->_data <= p->_data ) {
+//				max = p;
+//			}
+//			p = p->_succ;
+//			n--;
+//		}
+		for ( ListNodePosi(T) cur = p; 1 < n; n-- ) {
+			if( ( (cur = cur->_succ) ->_data) >= (max->_data)) {
+				max = cur;
 			}
 		}
 		return max;
 	}
 	
 #pragma mark - 排序
+	void swap( T& a, T& b ) {
+		T c(a); a=b; b=c;
+	}
 	
 	/*
 	 选择排序
@@ -257,28 +266,36 @@ public:
 	void sort_selection( ListNodePosi(T) p, int n )
 	{
 		if( n < 2 ) {
-			return p;
+			return;
 		}
 		// 设置待排区间 ( head, tail )
 		ListNodePosi(T) head = p->_pred;
 		ListNodePosi(T) tail = p;
-		while (0 < n--) {
+		for (int i = 0; i < n; i++) {
 			tail = tail->_succ;
 		}
-		
-		while ( 1 < n-- ) {
+		ListNodePosi(T) max = nullptr;
+		while ( 1 < n ) {
 			// 遍历乱序区域, 找到最大的
-			ListNodePosi(T) max = selectMax(p, n);
+			max = selectMax(p, n);
 			// 如果已在有序部分的最前端, 则无需移动
-			if (max != tail->_pred) {
-				// 交换 max 和 tail 之前一个节点的数据域
+			if (max != tail->_pred) {	// 这里条件在通常情况下, 出现的概率极低, 以至于有时候甚至会得不偿失.
+				// 交换 max 和 tail 之前一个节点的数据域. 或者可以直接交换这两个指针的指向
 				swap(max->_data, tail->_pred->_data);
 			}
 			tail = tail->_pred;
+			n--;
 		}
+		// 邓俊辉老师的实现方式
+//		while ( 1 < n ) {
+//			max = selectMax(head->_succ, n);
+//			if (max != tail->_pred) {
+//				insertBefore(tail, remove(max));
+//			}
+//			tail = tail->_pred;
+//			n--;
+//		}
 	}
-	
-	
 };
 
 

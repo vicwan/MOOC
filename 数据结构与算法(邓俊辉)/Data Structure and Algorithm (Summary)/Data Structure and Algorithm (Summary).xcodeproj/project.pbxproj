@@ -80,10 +80,10 @@
 		0D7E7BB21FC3320900CEBDA3 /* Data Stucture and Algorithm (Summary) */ = {
 			isa = PBXGroup;
 			children = (
+				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
 				3D3D8F081FCBA60500E979C1 /* Fibonacci */,
 				3D3D8F0B1FCBA63100E979C1 /* Vector */,
 				0D4992ED1FCB1FAB00344529 /* List */,
-				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
 			);
 			path = "Data Stucture and Algorithm (Summary)";
 			sourceTree = "<group>";

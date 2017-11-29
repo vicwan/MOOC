@@ -23,8 +23,8 @@ void test_list();
 int main(int argc, const char * argv[]) {
 	
     
-    test_vector();
-//    test_list();
+//    test_vector();
+    test_list();
 	
     return 0;
 }
@@ -96,16 +96,20 @@ void  test_list()
     }
     list.insert(3, 10000);
     cout << endl;
-    for (int i = 0; i < list.size(); i++) {
-        cout << list[i] << "  ";
-    }
-    cout << endl;
-    cout << "是否为空:" << list.empty() << endl;
-
-	int removed = list.deduplicate();
-	cout << "测试 deduplicate. " << "删除了: " << removed << "个元素" << endl;
+//    for (int i = 0; i < list.size(); i++) {
+//        cout << list[i] << "  ";
+//    }
+//    cout << endl;
+//    cout << "是否为空:" << list.empty() << endl;
+//
+//	int removed = list.deduplicate();
+//	cout << "测试 deduplicate. " << "删除了: " << removed << "个元素" << endl;
+//	for (int i = 0; i < list.size(); i++) {
+//		cout << list[i] << "  ";
+//	}
+	cout << "选择排序:" << endl;
+	list.sort_selection(list.first(), list.size());
 	for (int i = 0; i < list.size(); i++) {
 		cout << list[i] << "  ";
 	}
-	
 }
