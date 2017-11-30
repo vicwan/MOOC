@@ -30,7 +30,11 @@ int main(int argc, const char * argv[]) {
 //    test_vector();
 //    test_list();
 //	test_stack();
-	convert(8, 2);
+//    convert(8, 2);
+    
+    char exp[] = "(()()))";
+    paren(exp, 0, 7);
+    
 	
     return 0;
 }

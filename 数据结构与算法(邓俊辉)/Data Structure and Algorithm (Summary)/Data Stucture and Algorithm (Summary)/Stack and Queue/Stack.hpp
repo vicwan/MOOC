@@ -45,7 +45,12 @@ public:
 	
 # pragma mark - 栈操作
 	void push( T const& e ) { _list.append(e); }
-	T pop() { return _list.remove(_list.last()); }
+	
+    T pop() {
+        ListNodePosi(T) last = _list.last();
+        T rm = _list.remove(last);
+        return rm;
+    }
 	
 };
 

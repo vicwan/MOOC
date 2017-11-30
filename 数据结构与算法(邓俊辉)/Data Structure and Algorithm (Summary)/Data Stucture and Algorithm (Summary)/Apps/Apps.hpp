@@ -12,6 +12,9 @@
 #include <stdio.h>
 #include <iostream>
 
-void convert (int n, int base );
+void convert ( int n, int base );
+bool paren( const char exp[], int lo, int hi );
+
+
 
 #endif /* Apps_hpp */

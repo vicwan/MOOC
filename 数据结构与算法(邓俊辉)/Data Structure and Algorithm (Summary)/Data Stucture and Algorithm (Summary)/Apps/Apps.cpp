@@ -12,7 +12,7 @@
 using namespace std;
 
 
-void convert (int n, int base )
+void convert ( int n, int base )
 {
 	Stack<char> s = Stack<char>();
 	
@@ -21,9 +21,33 @@ void convert (int n, int base )
 		s.push( digit[n % base] );
 		n /= base;
 	}
-	
-	for (int i = 0; i < s.size(); i++) {
-		cout << s.pop() << "  ";
+    int size = s.size();
+	for (int i = 0; i < size; i++) {
+		cout << s.pop() << "";
 	}
 	cout << endl;
 }
+
+// 返回 1 则匹配.
+bool paren( const char exp[], int lo, int hi )
+{
+    Stack<char> s = Stack<char>();
+    for (int i = 0; i < hi - lo ; i++) {
+        if (exp[i] == '(') {
+            s.push(exp[i]);
+        }else if ( !s.empty() ) {
+            s.pop();
+        }else {
+            cout << "有无法匹配的右括号" << endl;
+            return false;
+        }
+    }
+    if (s.empty()) {
+        cout << "括号完全匹配" << endl;
+        return true;
+    }else {
+        cout << "有未匹配的左括号" << endl;
+        return false;
+    }
+}
+
