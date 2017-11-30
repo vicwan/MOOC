@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include "Apps.hpp"		//应用函数
+
 #include "Vector.hpp"
 #include "List.hpp"
 #include "Stack.hpp"
@@ -27,7 +29,8 @@ int main(int argc, const char * argv[]) {
     
 //    test_vector();
 //    test_list();
-	test_stack();
+//	test_stack();
+	convert(8, 2);
 	
     return 0;
 }
@@ -134,5 +137,6 @@ void test_stack()
 	cout << "Pop 后 Size 为:" << s.size() << "  是否为空: " << s.empty() << endl;
 	cout << endl;
 }
+
 
 #pragma mark - 测试 Queue

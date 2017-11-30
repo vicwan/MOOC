@@ -13,6 +13,8 @@
 		3DC3A4831FCB9C74003DD2BD /* ListNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3A4811FCB9C74003DD2BD /* ListNode.cpp */; };
 		3DC3A4861FCBA4B8003DD2BD /* List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3A4841FCBA4B8003DD2BD /* List.cpp */; };
 		3DDF302F1FCFC65400305A30 /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF302D1FCFC65400305A30 /* Stack.cpp */; };
+		3DDF30321FCFFA8D00305A30 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF30301FCFFA8D00305A30 /* Queue.cpp */; };
+		3DDF30391FD0076500305A30 /* Apps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF30371FD0076500305A30 /* Apps.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,10 @@
 		3DC3A4851FCBA4B8003DD2BD /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
 		3DDF302D1FCFC65400305A30 /* Stack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stack.cpp; sourceTree = "<group>"; };
 		3DDF302E1FCFC65400305A30 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		3DDF30301FCFFA8D00305A30 /* Queue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
+		3DDF30311FCFFA8D00305A30 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
+		3DDF30371FD0076500305A30 /* Apps.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Apps.cpp; sourceTree = "<group>"; };
+		3DDF30381FD0076500305A30 /* Apps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Apps.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
+				3DDF30361FD0074F00305A30 /* Apps */,
 				3DDF302C1FCFB41100305A30 /* Stack and Queue */,
 				0D4992ED1FCB1FAB00344529 /* List */,
 				3D3D8F0B1FCBA63100E979C1 /* Vector */,
@@ -113,10 +120,21 @@
 		3DDF302C1FCFB41100305A30 /* Stack and Queue */ = {
 			isa = PBXGroup;
 			children = (
-				3DDF302D1FCFC65400305A30 /* Stack.cpp */,
 				3DDF302E1FCFC65400305A30 /* Stack.hpp */,
+				3DDF302D1FCFC65400305A30 /* Stack.cpp */,
+				3DDF30311FCFFA8D00305A30 /* Queue.hpp */,
+				3DDF30301FCFFA8D00305A30 /* Queue.cpp */,
 			);
 			path = "Stack and Queue";
+			sourceTree = "<group>";
+		};
+		3DDF30361FD0074F00305A30 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				3DDF30381FD0076500305A30 /* Apps.hpp */,
+				3DDF30371FD0076500305A30 /* Apps.cpp */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDF30321FCFFA8D00305A30 /* Queue.cpp in Sources */,
 				3DC3A4831FCB9C74003DD2BD /* ListNode.cpp in Sources */,
 				0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */,
 				3DDF302F1FCFC65400305A30 /* Stack.cpp in Sources */,
 				3D3D8F161FCBA79B00E979C1 /* Fib.cpp in Sources */,
+				3DDF30391FD0076500305A30 /* Apps.cpp in Sources */,
 				3D3D8F141FCBA76500E979C1 /* Vector.cpp in Sources */,
 				3DC3A4861FCBA4B8003DD2BD /* List.cpp in Sources */,
 			);
