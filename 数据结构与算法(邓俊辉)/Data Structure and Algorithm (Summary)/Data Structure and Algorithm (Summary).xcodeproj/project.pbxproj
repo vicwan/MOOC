@@ -12,6 +12,7 @@
 		3D3D8F161FCBA79B00E979C1 /* Fib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8F151FCBA79B00E979C1 /* Fib.cpp */; };
 		3DC3A4831FCB9C74003DD2BD /* ListNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3A4811FCB9C74003DD2BD /* ListNode.cpp */; };
 		3DC3A4861FCBA4B8003DD2BD /* List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3A4841FCBA4B8003DD2BD /* List.cpp */; };
+		3DDF302F1FCFC65400305A30 /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF302D1FCFC65400305A30 /* Stack.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		3DC3A4821FCB9C74003DD2BD /* ListNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ListNode.hpp; sourceTree = "<group>"; };
 		3DC3A4841FCBA4B8003DD2BD /* List.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = List.cpp; sourceTree = "<group>"; };
 		3DC3A4851FCBA4B8003DD2BD /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
+		3DDF302D1FCFC65400305A30 /* Stack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stack.cpp; sourceTree = "<group>"; };
+		3DDF302E1FCFC65400305A30 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
-				3D3D8F081FCBA60500E979C1 /* Fibonacci */,
-				3D3D8F0B1FCBA63100E979C1 /* Vector */,
+				3DDF302C1FCFB41100305A30 /* Stack and Queue */,
 				0D4992ED1FCB1FAB00344529 /* List */,
+				3D3D8F0B1FCBA63100E979C1 /* Vector */,
+				3D3D8F081FCBA60500E979C1 /* Fibonacci */,
 			);
 			path = "Data Stucture and Algorithm (Summary)";
 			sourceTree = "<group>";
@@ -104,6 +108,15 @@
 				3D3D8F121FCBA76500E979C1 /* Vector.cpp */,
 			);
 			path = Vector;
+			sourceTree = "<group>";
+		};
+		3DDF302C1FCFB41100305A30 /* Stack and Queue */ = {
+			isa = PBXGroup;
+			children = (
+				3DDF302D1FCFC65400305A30 /* Stack.cpp */,
+				3DDF302E1FCFC65400305A30 /* Stack.hpp */,
+			);
+			path = "Stack and Queue";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +178,7 @@
 			files = (
 				3DC3A4831FCB9C74003DD2BD /* ListNode.cpp in Sources */,
 				0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */,
+				3DDF302F1FCFC65400305A30 /* Stack.cpp in Sources */,
 				3D3D8F161FCBA79B00E979C1 /* Fib.cpp in Sources */,
 				3D3D8F141FCBA76500E979C1 /* Vector.cpp in Sources */,
 				3DC3A4861FCBA4B8003DD2BD /* List.cpp in Sources */,

@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Vector.hpp"
 #include "List.hpp"
+#include "Stack.hpp"
 
 
 using namespace std;
@@ -17,6 +18,7 @@ using namespace std;
 #pragma mark - 函数声明
 void test_vector();
 void test_list();
+void test_stack();
 
 
 #pragma mark - Main 函数
@@ -24,7 +26,8 @@ int main(int argc, const char * argv[]) {
 	
     
 //    test_vector();
-    test_list();
+//    test_list();
+	test_stack();
 	
     return 0;
 }
@@ -83,7 +86,7 @@ void test_vector()
 #pragma mark - 测试 List
 #define DEFAULT_LIST_SIZE 10
 typedef List<int> ListInt;
-void  test_list()
+void test_list()
 {
 	ListInt list = ListInt();
 	for (int i = 0; i < DEFAULT_LIST_SIZE; i++) {
@@ -113,3 +116,23 @@ void  test_list()
 		cout << list[i] << "  ";
 	}
 }
+
+#pragma mark - 测试 Stack
+typedef Stack<int> StackInt;
+void test_stack()
+{
+	StackInt s = StackInt();
+	for (int i = 0; i < DEFAULT_LIST_SIZE; i++) {
+		int e = arc4random_uniform(100);
+		s.push(e);
+	}
+	cout << "Pop 前 Size 为:" << s.size() << "  是否为空: " << s.empty() << endl;
+	for (int i = 0; i < DEFAULT_LIST_SIZE; i++) {
+		cout << s.pop() << "  ";
+	}
+	cout << endl;
+	cout << "Pop 后 Size 为:" << s.size() << "  是否为空: " << s.empty() << endl;
+	cout << endl;
+}
+
+#pragma mark - 测试 Queue

@@ -20,7 +20,6 @@ typedef int Rank;
 #define DEFAULT_CAPACITY 3
 
 
-
 // 规定 lo 和 hi 为左闭右开的区间, 即 [lo, hi)
 template <typename T>
 class Vector {
