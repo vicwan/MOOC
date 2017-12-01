@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "ListNode.hpp"
+#include "ErrorCode.hpp"
 
 typedef int Rank;
 
@@ -36,7 +37,10 @@ public:
 	
 	ListNodePosi(T) last()	// 取末尾元素
 	{
-		assert(_size > 0);
+//		assert(_size > 0);
+		if( _size <= 0 ) {
+			throw kErrCode_listLastRetrieve;
+		}
 		return _trailer->_pred;
 	}
 	

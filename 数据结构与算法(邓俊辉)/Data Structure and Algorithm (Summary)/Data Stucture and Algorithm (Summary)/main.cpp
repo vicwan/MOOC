@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
 //	test_stack();
 //    convert(8, 2);
     
-    char exp[] = "(()()))";
+    char exp[] = "()([])]";
     paren(exp, 0, 7);
     
 	

@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		0D7E7BB01FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Structure and Algorithm (Summary)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7E7BB31FC3320900CEBDA3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3D217B401FD15DF300E38437 /* ErrorCode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ErrorCode.hpp; sourceTree = "<group>"; };
 		3D3D8F101FCBA70500E979C1 /* Fib.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Fib.hpp; sourceTree = "<group>"; };
 		3D3D8F121FCBA76500E979C1 /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
 		3D3D8F131FCBA76500E979C1 /* Vector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
+				3D217B401FD15DF300E38437 /* ErrorCode.hpp */,
 				3DDF30361FD0074F00305A30 /* Apps */,
 				3DDF302C1FCFB41100305A30 /* Stack and Queue */,
 				0D4992ED1FCB1FAB00344529 /* List */,
