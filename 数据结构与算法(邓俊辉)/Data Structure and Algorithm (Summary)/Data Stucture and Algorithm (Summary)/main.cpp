@@ -32,9 +32,13 @@ int main(int argc, const char * argv[]) {
 //	test_stack();
 //    convert(8, 2);
     
-    char exp[] = "()([])]";
-    paren(exp, 0, 7);
-    
+//    char exp[] = "()([])]";
+//    paren(exp, 0, 7);
+//    cout << len(exp) << endl;
+//    int ori[] = {1,2,3};
+//    int fin[] = {3,2,1};
+//
+//    cout <<  kk(ori, fin) << endl;
 	
     return 0;
 }

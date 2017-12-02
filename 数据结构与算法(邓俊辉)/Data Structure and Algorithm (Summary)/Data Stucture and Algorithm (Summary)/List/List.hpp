@@ -39,7 +39,8 @@ public:
 	{
 //		assert(_size > 0);
 		if( _size <= 0 ) {
-			throw kErrCode_listLastRetrieve;
+//            throw kErrCode_listLastRetrieve;
+            return nullptr;
 		}
 		return _trailer->_pred;
 	}
