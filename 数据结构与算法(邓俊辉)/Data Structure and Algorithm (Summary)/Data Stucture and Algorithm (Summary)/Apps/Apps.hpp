@@ -18,7 +18,7 @@ bool paren( const char exp[], int lo, int hi ); // 括号匹配判断
 
 
 template <typename T>
-int len( T& A ) {    // 卡住了, 如何求数组的长度?
+int len( T& A ) {    // 卡住了, 如何求数组的长度? 栈混洗需要使用
     int totalSize = sizeof(A);
     int typeSize = sizeof(A[0]);
     int len = totalSize / typeSize;
@@ -34,26 +34,19 @@ bool kk( const T ori[], const T fin[] ) {   // 栈混洗序列的判断
     if ( len(ori) != len(fin) ) {
         return false;
     }
-    
     Stack<T> A = Stack<T>();
     Stack<T> B = Stack<T>();
     Stack<T> C = Stack<T>();
-    
     // 将 ori[] 装进栈 A 中
     int i = len(ori) - 1;
     while ( (ori[i] != '\0') && ( i >= 0 ) ) {
         A.push( ori[i] );
     }
-    
-    
     int j = 0;
-    
-    while (1) {
-        
+    while (true) {
         if ( A.empty() && !B.empty() && (B.top() != fin[j]) ) {
             return false;
         }
-        
         if ( fin[j] != B.top() ) {
             // 如果 ori[i] 值与 A.top 不相等, 则 A.top pop 出来, 压入 B
             if ( fin[j] == A.top() ) {
@@ -65,7 +58,6 @@ bool kk( const T ori[], const T fin[] ) {   // 栈混洗序列的判断
             __pop_and_push__(B, C);
         }
         j++;
-        
     }
     return true;
 }

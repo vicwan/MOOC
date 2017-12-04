@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "Apps.hpp"		//应用函数
+#include "Traverse.hpp"	//遍历
 
 #include "Vector.hpp"
 #include "List.hpp"
@@ -16,6 +17,8 @@
 
 using namespace std;
 
+
+Visit<int> visit = Visit<int>();	//访问器声明
 
 #pragma mark - 函数声明
 void test_vector();
@@ -26,7 +29,9 @@ void test_stack();
 #pragma mark - Main 函数
 int main(int argc, const char * argv[]) {
 	
-    
+	
+	visit(1);
+	
 //    test_vector();
 //    test_list();
 //	test_stack();
