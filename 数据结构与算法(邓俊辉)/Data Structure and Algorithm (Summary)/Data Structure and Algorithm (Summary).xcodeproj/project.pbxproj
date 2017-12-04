@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4499B61FD58CAC0064560C /* BinTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4499B41FD58CAC0064560C /* BinTree.cpp */; };
 		0D4F45F81FD3E868005F32D1 /* BinNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4F45F61FD3E868005F32D1 /* BinNode.cpp */; };
 		0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BB31FC3320900CEBDA3 /* main.cpp */; };
 		3D3D8F141FCBA76500E979C1 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8F121FCBA76500E979C1 /* Vector.cpp */; };
@@ -16,8 +17,6 @@
 		3DDF302F1FCFC65400305A30 /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF302D1FCFC65400305A30 /* Stack.cpp */; };
 		3DDF30321FCFFA8D00305A30 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF30301FCFFA8D00305A30 /* Queue.cpp */; };
 		3DDF30391FD0076500305A30 /* Apps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF30371FD0076500305A30 /* Apps.cpp */; };
-		3DF8B3891FD4DBBA004299FA /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8B3871FD4DBBA004299FA /* TreeNode.cpp */; };
-		3DF8B38C1FD4DBC4004299FA /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8B38A1FD4DBC4004299FA /* Tree.cpp */; };
 		3DF8B38F1FD54900004299FA /* Traverse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8B38D1FD54900004299FA /* Traverse.cpp */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D4499B41FD58CAC0064560C /* BinTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinTree.cpp; sourceTree = "<group>"; };
+		0D4499B51FD58CAC0064560C /* BinTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinTree.hpp; sourceTree = "<group>"; };
 		0D4F45F61FD3E868005F32D1 /* BinNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinNode.cpp; sourceTree = "<group>"; };
 		0D4F45F71FD3E868005F32D1 /* BinNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinNode.hpp; sourceTree = "<group>"; };
 		0D7E7BB01FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Structure and Algorithm (Summary)"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,10 +54,6 @@
 		3DDF30311FCFFA8D00305A30 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		3DDF30371FD0076500305A30 /* Apps.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Apps.cpp; sourceTree = "<group>"; };
 		3DDF30381FD0076500305A30 /* Apps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Apps.hpp; sourceTree = "<group>"; };
-		3DF8B3871FD4DBBA004299FA /* TreeNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
-		3DF8B3881FD4DBBA004299FA /* TreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
-		3DF8B38A1FD4DBC4004299FA /* Tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
-		3DF8B38B1FD4DBC4004299FA /* Tree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tree.hpp; sourceTree = "<group>"; };
 		3DF8B38D1FD54900004299FA /* Traverse.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Traverse.cpp; sourceTree = "<group>"; };
 		3DF8B38E1FD54900004299FA /* Traverse.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Traverse.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +83,8 @@
 		0D4F45F21FD3E1AA005F32D1 /* BinTree */ = {
 			isa = PBXGroup;
 			children = (
+				0D4499B51FD58CAC0064560C /* BinTree.hpp */,
+				0D4499B41FD58CAC0064560C /* BinTree.cpp */,
 				0D4F45F71FD3E868005F32D1 /* BinNode.hpp */,
 				0D4F45F61FD3E868005F32D1 /* BinNode.cpp */,
 			);
@@ -114,8 +113,6 @@
 				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
 				3D217B401FD15DF300E38437 /* ErrorCode.hpp */,
 				0D4F45F21FD3E1AA005F32D1 /* BinTree */,
-				3DDF30361FD0074F00305A30 /* Apps */,
-				3DF8B3861FD4DB9C004299FA /* Tree_tmp */,
 				3DDF302C1FCFB41100305A30 /* Stack and Queue */,
 				0D4992ED1FCB1FAB00344529 /* List */,
 				3D3D8F0B1FCBA63100E979C1 /* Vector */,
@@ -163,17 +160,6 @@
 				3DF8B38D1FD54900004299FA /* Traverse.cpp */,
 			);
 			path = Apps;
-			sourceTree = "<group>";
-		};
-		3DF8B3861FD4DB9C004299FA /* Tree_tmp */ = {
-			isa = PBXGroup;
-			children = (
-				3DF8B3881FD4DBBA004299FA /* TreeNode.hpp */,
-				3DF8B3871FD4DBBA004299FA /* TreeNode.cpp */,
-				3DF8B38B1FD4DBC4004299FA /* Tree.hpp */,
-				3DF8B38A1FD4DBC4004299FA /* Tree.cpp */,
-			);
-			path = Tree_tmp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +227,9 @@
 				3DF8B38F1FD54900004299FA /* Traverse.cpp in Sources */,
 				3D3D8F161FCBA79B00E979C1 /* Fib.cpp in Sources */,
 				3DDF30391FD0076500305A30 /* Apps.cpp in Sources */,
+				0D4499B61FD58CAC0064560C /* BinTree.cpp in Sources */,
 				3D3D8F141FCBA76500E979C1 /* Vector.cpp in Sources */,
-				3DF8B3891FD4DBBA004299FA /* TreeNode.cpp in Sources */,
 				3DC3A4861FCBA4B8003DD2BD /* List.cpp in Sources */,
-				3DF8B38C1FD4DBC4004299FA /* Tree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

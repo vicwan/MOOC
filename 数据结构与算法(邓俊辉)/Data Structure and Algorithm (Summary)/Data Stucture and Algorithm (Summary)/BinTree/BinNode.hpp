@@ -11,27 +11,55 @@
 
 #include <stdio.h>
 
-#define BinNodePosi(T) BinNode<T>
+#define BinNodePosi(T) BinNode<T>*
 
 template <typename T>
 struct BinNode {
-    BinNodePosi(T)          _lChild, _rChild;     //左右孩子节点
-    BinNodePosi(T)          _parent;              //父亲节点
-    T                       _data;                //数据域
-    int                     _height;              //节点高度
-    int                     _size;                //子树规模 (包括自身在内, 以及所有后代的总数)
-    
+    BinNodePosi(T) _parent;
+    BinNodePosi(T) _lChild;
+    BinNodePosi(T) _rChild;
+    T _data;
+    int _height;
     
 public:
+    BinNode()
+    {
+        _parent = nullptr;
+        _lChild = nullptr;
+        _rChild = nullptr;
+    }
+    
+    BinNode( T e,
+            BinNodePosi(T) parent = nullptr,
+            BinNodePosi(T) lChild = nullptr,
+            BinNodePosi(T) rChild = nullptr,
+            int height = 0 )
+    {
+        _data = e;
+        _parent = parent;
+        _lChild = lChild;
+        _rChild = rChild;
+        _height = height;
+    }
+    // 为当前节点添加一个数据域为 e 的左孩子
     BinNodePosi(T) insertAsLC( T const& e )
     {
-        BinNodePosi(T) lChild = new BinNode<T>();
-        lChild._parent = this;
-        lChild._data = e;
-        _lChild = lChild;
-        return lChild;
+        return _lChild = BinNode( e, this );
     }
-    BinNodePosi(T) insertAsRC( T const& e );
+    // 为当前节点添加一个数据域为 e 的右孩子
+    BinNodePosi(T) insertAsRC( T const& e )
+    {
+        return _rChild = BinNode( e, this );
+    }
+    
+    int size()
+    {
+        int s = 1;
+        if (_lChild) s += _lChild->size();
+        if (_rChild) s += _rChild->size();
+        return s;
+    }
+    
 };
 
 #endif /* BinNode_hpp */
