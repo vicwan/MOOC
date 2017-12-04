@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4F45F81FD3E868005F32D1 /* BinNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4F45F61FD3E868005F32D1 /* BinNode.cpp */; };
 		0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D7E7BB31FC3320900CEBDA3 /* main.cpp */; };
 		3D3D8F141FCBA76500E979C1 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8F121FCBA76500E979C1 /* Vector.cpp */; };
 		3D3D8F161FCBA79B00E979C1 /* Fib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D8F151FCBA79B00E979C1 /* Fib.cpp */; };
@@ -30,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D4F45F61FD3E868005F32D1 /* BinNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinNode.cpp; sourceTree = "<group>"; };
+		0D4F45F71FD3E868005F32D1 /* BinNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinNode.hpp; sourceTree = "<group>"; };
 		0D7E7BB01FC3320900CEBDA3 /* Data Structure and Algorithm (Summary) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Structure and Algorithm (Summary)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7E7BB31FC3320900CEBDA3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3D217B401FD15DF300E38437 /* ErrorCode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ErrorCode.hpp; sourceTree = "<group>"; };
@@ -71,6 +74,15 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		0D4F45F21FD3E1AA005F32D1 /* BinTree */ = {
+			isa = PBXGroup;
+			children = (
+				0D4F45F71FD3E868005F32D1 /* BinNode.hpp */,
+				0D4F45F61FD3E868005F32D1 /* BinNode.cpp */,
+			);
+			path = BinTree;
+			sourceTree = "<group>";
+		};
 		0D7E7BA71FC3320900CEBDA3 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +104,7 @@
 			children = (
 				0D7E7BB31FC3320900CEBDA3 /* main.cpp */,
 				3D217B401FD15DF300E38437 /* ErrorCode.hpp */,
+				0D4F45F21FD3E1AA005F32D1 /* BinTree */,
 				3DDF30361FD0074F00305A30 /* Apps */,
 				3DDF302C1FCFB41100305A30 /* Stack and Queue */,
 				0D4992ED1FCB1FAB00344529 /* List */,
@@ -199,6 +212,7 @@
 				3DDF30321FCFFA8D00305A30 /* Queue.cpp in Sources */,
 				3DC3A4831FCB9C74003DD2BD /* ListNode.cpp in Sources */,
 				0D7E7BB41FC3320900CEBDA3 /* main.cpp in Sources */,
+				0D4F45F81FD3E868005F32D1 /* BinNode.cpp in Sources */,
 				3DDF302F1FCFC65400305A30 /* Stack.cpp in Sources */,
 				3D3D8F161FCBA79B00E979C1 /* Fib.cpp in Sources */,
 				3DDF30391FD0076500305A30 /* Apps.cpp in Sources */,
