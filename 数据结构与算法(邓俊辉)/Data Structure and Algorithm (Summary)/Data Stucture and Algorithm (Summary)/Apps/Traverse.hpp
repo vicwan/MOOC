@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <type_traits>
 
 using namespace std;
 
@@ -20,8 +21,9 @@ struct Visit {
 	
 public:
 	//访问元素, 仅仅是打印出来而已. 当然, 也可以在访问时增加其它功能
-	void operator() (T const e)
+	void operator() (T const& e)
 	{
+//		cout << is_same<T, char>::value << "\n";
 		cout << e << ", ";
 	}
 };

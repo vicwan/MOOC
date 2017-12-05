@@ -7,30 +7,31 @@
 //
 
 #include <iostream>
+
 #include "Apps.hpp"		//应用函数
 #include "Traverse.hpp"	//遍历
 
 #include "Vector.hpp"
 #include "List.hpp"
 #include "Stack.hpp"
+#include "BinTree.hpp"
+
 
 
 using namespace std;
 
 
-Visit<int> visit = Visit<int>();	//访问器声明
+Visit<int> visit_int = Visit<int>();	//访问器声明
+Visit<char> visit_char = Visit<char>();
 
 #pragma mark - 函数声明
 void test_vector();
 void test_list();
 void test_stack();
-
+void test_binTree();
 
 #pragma mark - Main 函数
 int main(int argc, const char * argv[]) {
-	
-	
-	visit(1);
 	
 //    test_vector();
 //    test_list();
@@ -44,6 +45,12 @@ int main(int argc, const char * argv[]) {
 //    int fin[] = {3,2,1};
 //
 //    cout <<  kk(ori, fin) << endl;
+	
+	test_binTree();
+	
+	
+
+	
 	
     return 0;
 }
@@ -153,3 +160,46 @@ void test_stack()
 
 
 #pragma mark - 测试 Queue
+
+
+#pragma mark - 测试 BinTree
+typedef BinTree<char> BinTreeChar;
+BinTreeChar* createBinTree()
+{
+	/*
+	 	      A
+	 		/  \
+	       /    \
+		  B      C
+		 / \    / \
+	 	D   E  F   G
+       / \ / \
+	  H  I J K
+	 
+	 */
+	
+	BinTreeChar* binTree = new BinTreeChar();
+	BinNodePosi(char) nodeA = binTree->insertAsRoot('A');
+	BinNodePosi(char) nodeB = binTree->insertAsLC(nodeA, 'B');
+	BinNodePosi(char) nodeC = binTree->insertAsRC(nodeA, 'C');
+	BinNodePosi(char) nodeD = binTree->insertAsLC(nodeB, 'D');
+	BinNodePosi(char) nodeE = binTree->insertAsRC(nodeB, 'E');
+	BinNodePosi(char) nodeF = binTree->insertAsLC(nodeC, 'F');
+	BinNodePosi(char) nodeG = binTree->insertAsRC(nodeC, 'G');
+	BinNodePosi(char) nodeH = binTree->insertAsLC(nodeD, 'H');
+	BinNodePosi(char) nodeI = binTree->insertAsRC(nodeD, 'I');
+	BinNodePosi(char) nodeJ = binTree->insertAsLC(nodeE, 'J');
+	BinNodePosi(char) nodeK = binTree->insertAsRC(nodeE, 'K');
+	
+	return binTree;
+	
+}
+
+void test_binTree()
+{
+	BinTreeChar *binTree = createBinTree();
+	
+//	binTree->travPre_V1(binTree->root(), visit_char);	// A, B, D, H, I, E, J, K, C, F, G
+	binTree->travPre_V2(binTree->root(), visit_char);
+	cout << endl;
+}

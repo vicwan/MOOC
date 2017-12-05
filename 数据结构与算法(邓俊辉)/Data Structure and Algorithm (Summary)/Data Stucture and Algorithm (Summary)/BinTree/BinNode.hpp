@@ -33,23 +33,24 @@ public:
             BinNodePosi(T) parent = nullptr,
             BinNodePosi(T) lChild = nullptr,
             BinNodePosi(T) rChild = nullptr,
-            int height = 0 )
+			int height = 0
+			) : _data(e), _parent(parent), _lChild(lChild), _rChild(rChild), _height(height)
     {
-        _data = e;
-        _parent = parent;
-        _lChild = lChild;
-        _rChild = rChild;
-        _height = height;
+//        _data = e;
+//        _parent = parent;
+//        _lChild = lChild;
+//        _rChild = rChild;
+//        _height = height;
     }
     // 为当前节点添加一个数据域为 e 的左孩子
     BinNodePosi(T) insertAsLC( T const& e )
     {
-        return _lChild = BinNode( e, this );
+        return _lChild = new BinNode( e, this );
     }
     // 为当前节点添加一个数据域为 e 的右孩子
     BinNodePosi(T) insertAsRC( T const& e )
     {
-        return _rChild = BinNode( e, this );
+        return _rChild = new BinNode( e, this );
     }
     
     int size()

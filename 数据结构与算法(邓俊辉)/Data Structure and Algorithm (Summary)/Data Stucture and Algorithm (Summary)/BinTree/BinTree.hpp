@@ -43,14 +43,25 @@ protected:
             x = x->_parent;
         }
     }
-    
+	
 public:
+	BinTree() : _size(0), _root(nullptr) {}
+	
+	BinNodePosi(T) root() const
+	{
+		return _root;
+	}
+	BinNodePosi(T) insertAsRoot( T const& e )
+	{
+		_size = 1;
+		return _root = new BinNode<T>(e);
+	}
+	
     BinNodePosi(T) insertAsLC( BinNodePosi(T) x, T const& e )
     {
         if (!x->_lChild) {
             _size ++;
         }
-        _size ++;
         x->insertAsLC(e);
         updateHeightAbove(x);
         return x->_lChild;
@@ -89,7 +100,8 @@ public:
     
     // 职责包括: 访问左侧链的同时, 将左侧链相关的右子树的根节点入栈
     template <typename VST>
-    void __visitAlongLeftBranch( Stack<BinNodePosi(T)> s, BinNodePosi(T) x, VST& visit )
+	// 参数 s 一定要加引用, 不然外部栈的 size 不会改变, 因为操作的栈是该函数内部临时的栈.
+    void __visitAlongLeftBranch( Stack<BinNodePosi(T)>& s, BinNodePosi(T) x, VST& visit )
     {
         while (x) {
             s.push(x->_rChild);
@@ -108,7 +120,9 @@ public:
             //访问左侧链的同时, 将左侧链相关的右子树的根节点入栈
             __visitAlongLeftBranch(s, x, visit);
             //及时判空
-            if (s.empty())  break;
+			if (s.empty()) {
+				break;
+			}
             //将控制权移交给栈顶元素, 即将对以该元素为根节点的子树的左侧链进行访问
             x = s.pop();
         }
