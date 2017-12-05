@@ -186,14 +186,14 @@ typedef BinTree<char> BinTreeChar;
 BinTreeChar* createBinTree()
 {
 	/*
-	 	      A
-	 		/  \
+              A
+            /  \
 	       /    \
 		  B      C
 		 / \    / \
 	 	D   E  F   G
-       / \ / \
-	  H  I J K
+       / \  / \
+	  H  I J  K
 	 
 	 */
 	
@@ -210,6 +210,9 @@ BinTreeChar* createBinTree()
 	BinNodePosi(char) nodeJ = binTree->insertAsLC(nodeE, 'J');
 	BinNodePosi(char) nodeK = binTree->insertAsRC(nodeE, 'K');
 	
+    visit_char(nodeK->succ()->_data);
+    visit_char(nodeJ->succ()->_data);
+    
 	return binTree;
 }
 
@@ -223,8 +226,8 @@ void test_binTree()
 //	binTree->travPost_recursion(binTree->root(), visit_char);
 //	binTree->travLevel(binTree->root(), visit_char);
 	
-	BinNodePosi(char) node = binTree->root();
-	visit_char(node->succ()->_data);
+	
+	
 	
 	cout << endl;
 }

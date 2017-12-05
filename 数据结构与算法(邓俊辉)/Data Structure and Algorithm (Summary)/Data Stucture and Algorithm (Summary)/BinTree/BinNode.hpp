@@ -62,15 +62,15 @@ public:
     }
 	
 	// 获取中序遍历情况下的后继
-	BinNodePosi(T) succ() const
+	BinNodePosi(T) succ()
 	{
-		BinNodePosi(T) node = nullptr;
+        BinNodePosi(T) node = this;
 		if( _rChild ) {
 			node = _rChild;
 //			while(_rChild->_lChild) {
 //				node = _rChild->_lChild;
 //			}
-			while( node->_rChild->_lChild ) {
+			while( node->_lChild ) {
 				node = _rChild->_lChild;
 			}
 		}else {
