@@ -29,6 +29,7 @@ void test_vector();
 void test_list();
 void test_stack();
 void test_binTree();
+void test_queue();
 
 #pragma mark - Main 函数
 int main(int argc, const char * argv[]) {
@@ -45,6 +46,8 @@ int main(int argc, const char * argv[]) {
 //    int fin[] = {3,2,1};
 //
 //    cout <<  kk(ori, fin) << endl;
+	
+//	test_queue();
 	
 	test_binTree();
 	
@@ -160,6 +163,22 @@ void test_stack()
 
 
 #pragma mark - 测试 Queue
+typedef Queue<int> QueueInt;
+void test_queue()
+{
+	QueueInt q = QueueInt();
+	cout << "队列是否为空: " << q.empty() << endl;
+	for (int i = 0; i < 5; i++) {
+		q.enqueue(i);
+	}
+	printf("队列是否为空: %d. 队列的规模为: %d \n", q.empty(), q.size());
+	printf("头部元素为: %d. 尾部元素为: %d \n", q.front(), q.rear());
+	while (q.size()) {
+		printf("%d ", q.dequeue());
+	}
+	cout << endl;
+	printf("此时队列是否为空: %d. 队列的规模为: %d \n", q.empty(), q.size());
+}
 
 
 #pragma mark - 测试 BinTree
@@ -192,7 +211,6 @@ BinTreeChar* createBinTree()
 	BinNodePosi(char) nodeK = binTree->insertAsRC(nodeE, 'K');
 	
 	return binTree;
-	
 }
 
 void test_binTree()
@@ -200,6 +218,13 @@ void test_binTree()
 	BinTreeChar *binTree = createBinTree();
 	
 //	binTree->travPre_V1(binTree->root(), visit_char);	// A, B, D, H, I, E, J, K, C, F, G
-	binTree->travPre_V2(binTree->root(), visit_char);
+//	binTree->travPre_V2(binTree->root(), visit_char);
+//	binTree->travIn(binTree->root(), visit_char);		// H, D, I, B, J, E, K, A, F, C, G
+//	binTree->travPost_recursion(binTree->root(), visit_char);
+//	binTree->travLevel(binTree->root(), visit_char);
+	
+	BinNodePosi(char) node = binTree->root();
+	visit_char(node->succ()->_data);
+	
 	cout << endl;
 }

@@ -76,7 +76,8 @@ public:
         updateHeightAbove(x);
         return x->_rChild;
     }
-    
+	
+#pragma mark - 遍历
     // 先序遍历
     template <typename VST>
     void travPre_V1( BinNodePosi(T) x, VST& visit )
@@ -127,6 +128,71 @@ public:
             x = s.pop();
         }
     }
+	
+	template <typename VST>
+	void __goAlongLeftBranch( Stack<BinNodePosi(T)>& s, BinNodePosi(T) x, VST& visit )
+	{
+		while (x) {
+			s.push(x);
+			x = x->_lChild;
+		}
+	}
+	// 中序遍历
+	template <typename VST>
+	void travIn( BinNodePosi(T) x, VST& visit )
+	{
+		Stack<BinNodePosi(T)> s = Stack<BinNodePosi(T)>();
+		while (true) {
+			__goAlongLeftBranch(s, x, visit);
+			if (s.empty()) {
+				break;
+			}
+			x = s.top()->_rChild;
+			visit(s.pop()->_data);
+//			x = s.pop();
+//			visit( x->_data );
+//			x = x->_rChild;
+		}
+	}
+	
+	// 后序遍历, 递归版本
+	template <typename VST>
+	void travPost_recursion( BinNodePosi(T) x, VST& visit )
+	{
+		if (x->_lChild) {
+			travPost(x->_lChild, visit);
+		}
+		if (x->_rChild) {
+			travPost(x->_rChild, visit);
+		}
+		visit( x->_data );
+	}
+	
+	template <typename VST>
+	void __visitAlongOnLevel( Queue<BinNodePosi(T)>& q, BinNodePosi(T) x, VST& visit )
+	{
+		
+	}
+	
+	template <typename VST>
+	void travLevel( BinNodePosi(T) x, VST& visit )
+	{
+		Queue<BinNodePosi(T)> q = Queue<BinNodePosi(T)>();
+		visit(x->_data);
+		while (1) {
+			if (x->_lChild) {
+				q.enqueue(x->_lChild);
+			}
+			if (x->_rChild) {
+				q.enqueue(x->_rChild);
+			}
+			if (q.empty()) {
+				break;
+			}
+			x = q.dequeue();
+			visit( x->_data );
+		}
+	}
 };
 
 #endif /* BinTree_hpp */

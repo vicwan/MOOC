@@ -24,8 +24,8 @@ public:
 	int size() const { return _list.size(); }
     bool empty() { return _list.size() <= 0; }      //判空
     void enqueue( T const& e ) { _list.append(e); } //入列
-    T dequeue() { return remove( _list.first()); }  //出列
-    T& front() { return _list.firstItem(); }        //队首元素
+    T dequeue() { return _list.remove( _list.first()); }  //出列
+	T& front() { return _list.first()->_data; }        //队首元素
     T& rear() { return _list.last()->_data; }       //队尾元素
 };
 

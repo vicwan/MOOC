@@ -106,11 +106,11 @@ public:
 	inline bool empty() const { return _size <= 0; }
 	
 #pragma mark - 元素访问
-	T& firstItem()	// 取首元素的数据 data
-	{
-		ListNodePosi(T) first = first();
-		return first->_data;
-	}
+//	T& firstItem()	// 取首元素的数据 data
+//	{
+//		ListNodePosi(T) first = first();
+//		return first->_data;
+//	}
 	
 	T& operator [] (Rank r)
 	{

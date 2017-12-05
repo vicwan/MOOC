@@ -60,6 +60,27 @@ public:
         if (_rChild) s += _rChild->size();
         return s;
     }
+	
+	// 获取中序遍历情况下的后继
+	BinNodePosi(T) succ() const
+	{
+		BinNodePosi(T) node = nullptr;
+		if( _rChild ) {
+			node = _rChild;
+//			while(_rChild->_lChild) {
+//				node = _rChild->_lChild;
+//			}
+			while( node->_rChild->_lChild ) {
+				node = _rChild->_lChild;
+			}
+		}else {
+			while( node->_parent->_rChild == node ) {
+				node = node->_parent;
+			}
+			node = node->_parent;
+		}
+		return node;
+	}
     
 };
 
