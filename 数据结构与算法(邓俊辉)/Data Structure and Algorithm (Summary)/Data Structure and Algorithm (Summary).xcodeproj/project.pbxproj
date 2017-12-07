@@ -20,6 +20,7 @@
 		3DDF30391FD0076500305A30 /* Apps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF30371FD0076500305A30 /* Apps.cpp */; };
 		3DE176ED1FD92A7B00DFE67F /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DE176EB1FD92A7B00DFE67F /* Vertex.cpp */; };
 		3DE176F01FD92F3400DFE67F /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DE176EE1FD92F3400DFE67F /* Edge.cpp */; };
+		3DE176F31FD934B500DFE67F /* GraphMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DE176F11FD934B500DFE67F /* GraphMatrix.cpp */; };
 		3DF8B38F1FD54900004299FA /* Traverse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8B38D1FD54900004299FA /* Traverse.cpp */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		3DE176EC1FD92A7B00DFE67F /* Vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vertex.hpp; sourceTree = "<group>"; };
 		3DE176EE1FD92F3400DFE67F /* Edge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Edge.cpp; sourceTree = "<group>"; };
 		3DE176EF1FD92F3400DFE67F /* Edge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Edge.hpp; sourceTree = "<group>"; };
+		3DE176F11FD934B500DFE67F /* GraphMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphMatrix.cpp; sourceTree = "<group>"; };
+		3DE176F21FD934B500DFE67F /* GraphMatrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphMatrix.hpp; sourceTree = "<group>"; };
 		3DF8B38D1FD54900004299FA /* Traverse.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Traverse.cpp; sourceTree = "<group>"; };
 		3DF8B38E1FD54900004299FA /* Traverse.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Traverse.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +158,8 @@
 			children = (
 				3D4B367F1FD7CA9700285974 /* Graph.hpp */,
 				3D4B367E1FD7CA9700285974 /* Graph.cpp */,
+				3DE176F21FD934B500DFE67F /* GraphMatrix.hpp */,
+				3DE176F11FD934B500DFE67F /* GraphMatrix.cpp */,
 				3DE176EC1FD92A7B00DFE67F /* Vertex.hpp */,
 				3DE176EB1FD92A7B00DFE67F /* Vertex.cpp */,
 				3DE176EF1FD92F3400DFE67F /* Edge.hpp */,
@@ -255,6 +260,7 @@
 				3D3D8F141FCBA76500E979C1 /* Vector.cpp in Sources */,
 				3DC3A4861FCBA4B8003DD2BD /* List.cpp in Sources */,
 				3DE176F01FD92F3400DFE67F /* Edge.cpp in Sources */,
+				3DE176F31FD934B500DFE67F /* GraphMatrix.cpp in Sources */,
 				3DE176ED1FD92A7B00DFE67F /* Vertex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

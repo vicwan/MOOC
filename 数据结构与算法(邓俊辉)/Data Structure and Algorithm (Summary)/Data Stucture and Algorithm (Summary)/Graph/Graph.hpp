@@ -11,4 +11,12 @@
 
 #include <stdio.h>
 
+template <typename Tv, typename Te>
+class Graph {
+	
+	
+public:	// 顶点操作, 边操作, 图算法
+	
+};
+
 #endif /* Graph_hpp */
