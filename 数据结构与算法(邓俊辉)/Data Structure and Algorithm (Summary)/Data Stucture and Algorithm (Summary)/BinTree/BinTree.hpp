@@ -47,11 +47,11 @@ protected:
 public:
 	BinTree() : _size(0), _root(nullptr) {}
 	
-	BinNodePosi(T) root() const
+	inline BinNodePosi(T) root() const
 	{
 		return _root;
 	}
-	BinNodePosi(T) insertAsRoot( T const& e )
+	inline BinNodePosi(T) insertAsRoot( T const& e )
 	{
 		_size = 1;
 		return _root = new BinNode<T>(e);

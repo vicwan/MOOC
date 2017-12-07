@@ -29,22 +29,22 @@ public:
 	}
 	
 # pragma mark - 元素访问
-	T& top() {
+	inline T& top() {
 		return _list.last()->_data;
 	}
 	
-	bool empty() const
+	inline bool empty() const
 	{
 		return _list.size() <= 0;
 	}
 	
-	int size() const
+	inline int size() const
 	{
 		return _list.size();
 	}
 	
 # pragma mark - 栈操作
-	void push( T const& e ) { _list.append(e); }
+	inline void push( T const& e ) { _list.append(e); }
 	
     T pop() {
         ListNodePosi(T) last = _list.last();
