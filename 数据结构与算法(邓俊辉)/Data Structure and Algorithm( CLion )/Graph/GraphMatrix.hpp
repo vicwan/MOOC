@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "Graph.hpp"
-#include "Vector.hpp"
+#include "../Vector/Vector.hpp"
 
 template <typename Tv, typename Te>
 class GraphMatrix: public Graph<Tv, Te> {

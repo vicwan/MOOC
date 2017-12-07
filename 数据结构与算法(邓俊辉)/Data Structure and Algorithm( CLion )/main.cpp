@@ -8,14 +8,14 @@
 
 #include <iostream>
 
-#include "Apps.hpp"		//应用函数
-#include "Traverse.hpp"	//遍历
+#include "Apps/Apps.hpp"		//应用函数
+#include "Apps/Traverse.hpp"	//遍历
 
-#include "Vector.hpp"
-#include "List.hpp"
-#include "Stack.hpp"
-#include "BinTree.hpp"
-#include "GraphMatrix.hpp"
+#include "Vector/Vector.hpp"
+#include "List/List.hpp"
+#include "Stack and Queue/Stack.hpp"
+#include "BinTree/BinTree.hpp"
+#include "Graph/GraphMatrix.hpp"
 
 
 using namespace std;
@@ -224,10 +224,7 @@ void test_binTree()
 //	binTree->travPre_V2(binTree->root(), visit_char);
 //	binTree->travIn(binTree->root(), visit_char);		// H, D, I, B, J, E, K, A, F, C, G
 //	binTree->travPost_recursion(binTree->root(), visit_char);
-//	binTree->travLevel(binTree->root(), visit_char);
-	
-	
-	
-	
+	binTree->travLevel(binTree->root(), visit_char);
+
 	cout << endl;
 }

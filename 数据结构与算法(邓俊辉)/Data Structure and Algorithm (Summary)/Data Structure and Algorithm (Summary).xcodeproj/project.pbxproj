@@ -156,10 +156,10 @@
 		3D4B367D1FD7CA8200285974 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
-				3D4B367F1FD7CA9700285974 /* Graph.hpp */,
-				3D4B367E1FD7CA9700285974 /* Graph.cpp */,
 				3DE176F21FD934B500DFE67F /* GraphMatrix.hpp */,
 				3DE176F11FD934B500DFE67F /* GraphMatrix.cpp */,
+				3D4B367F1FD7CA9700285974 /* Graph.hpp */,
+				3D4B367E1FD7CA9700285974 /* Graph.cpp */,
 				3DE176EC1FD92A7B00DFE67F /* Vertex.hpp */,
 				3DE176EB1FD92A7B00DFE67F /* Vertex.cpp */,
 				3DE176EF1FD92F3400DFE67F /* Edge.hpp */,

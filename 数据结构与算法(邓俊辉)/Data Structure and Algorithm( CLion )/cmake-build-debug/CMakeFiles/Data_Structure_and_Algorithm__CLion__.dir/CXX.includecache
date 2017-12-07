@@ -1,0 +1,124 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Apps/Apps.hpp
+stdio.h
+-
+iostream
+-
+../Stack and Queue/Stack.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Stack and Queue/Stack.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Apps/Traverse.hpp
+stdio.h
+-
+iostream
+-
+type_traits
+-
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/BinTree/BinNode.hpp
+stdio.h
+-
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/BinTree/BinTree.hpp
+stdio.h
+-
+iostream
+-
+BinNode.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/BinTree/BinNode.hpp
+../Stack and Queue/Stack.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Stack and Queue/Stack.hpp
+../Stack and Queue/Queue.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Stack and Queue/Queue.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/ErrorCode.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Fibonacci/Fib.hpp
+stdio.h
+-
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Graph/Edge.hpp
+stdio.h
+-
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Graph/Graph.hpp
+stdio.h
+-
+Vertex.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Graph/Vertex.hpp
+Edge.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Graph/Edge.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Graph/GraphMatrix.hpp
+stdio.h
+-
+Graph.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Graph/Graph.hpp
+../Vector/Vector.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Vector/Vector.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Graph/Vertex.hpp
+stdio.h
+-
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/List/List.hpp
+stdio.h
+-
+assert.h
+-
+ListNode.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/List/ListNode.hpp
+../ErrorCode.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/ErrorCode.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/List/ListNode.hpp
+stdio.h
+-
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Stack and Queue/Queue.hpp
+stdio.h
+-
+../List/List.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/List/List.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Stack and Queue/Stack.hpp
+stdio.h
+-
+../List/List.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/List/List.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Vector/Vector.hpp
+stdio.h
+-
+assert.h
+-
+stdlib.h
+-
+../Fibonacci/Fib.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Fibonacci/Fib.hpp
+
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/main.cpp
+iostream
+-
+Apps/Apps.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Apps/Apps.hpp
+Apps/Traverse.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Apps/Traverse.hpp
+Vector/Vector.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Vector/Vector.hpp
+List/List.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/List/List.hpp
+Stack and Queue/Stack.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Stack and Queue/Stack.hpp
+BinTree/BinTree.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/BinTree/BinTree.hpp
+Graph/GraphMatrix.hpp
+/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/Graph/GraphMatrix.hpp
+
