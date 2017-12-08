@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/main.cpp" "/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/cmake-build-debug/CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o"
+  "/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/main.cpp" "/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug/CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

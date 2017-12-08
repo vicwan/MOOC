@@ -1,6 +1,6 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/vicwan/Desktop/Data Structure and Algorithm( CLion )"
--- The C compiler identification is AppleClang 9.0.0.9000039
--- The CXX compiler identification is AppleClang 9.0.0.9000039
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )"
+-- The C compiler identification is AppleClang 9.0.0.9000038
+-- The CXX compiler identification is AppleClang 9.0.0.9000038
 -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
 -- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/vicwan/Desktop/Data Structure and Algorithm( CLion )/cmake-build-debug
+-- Build files have been written to: /Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug

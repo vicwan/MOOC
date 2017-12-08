@@ -46,7 +46,7 @@ public:	// 顶点操作, 边操作, 图算法
 #pragma mark - 边相关
     int _e;                                 //边总数
     virtual bool exists( int, int ) = 0;    //判断两个顶点是否邻接
-    virtual Te& edge( int ) = 0;            //边数据
+    virtual Te& edge( int, int ) = 0;       //边数据
     virtual int& weight( int ) = 0;         //权重
     virtual EStatus& status_e( int, int ) = 0;    //边的状态
     virtual Te remove( int, int ) = 0;      //删除两个顶点之间的边, 并返回该边的信息

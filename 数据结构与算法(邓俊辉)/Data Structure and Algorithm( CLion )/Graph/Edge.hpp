@@ -14,9 +14,9 @@
 typedef enum {
 	UNDETERMINED,
 	TREE,
-	CROSS,
-	FORWARD,
-	BACKWARD,
+    CROSS,
+    FORWARD,
+    BACKWARD,
 } EStatus;
 
 template <typename Te>
@@ -27,9 +27,9 @@ struct Edge {
 	
 public:
 	Edge( Te const& e, int w ): _data(e), _weight(w), _status(UNDETERMINED)
-	{
-		
-	}
+    {
+
+    }
 };
 
 #endif /* Edge_hpp */

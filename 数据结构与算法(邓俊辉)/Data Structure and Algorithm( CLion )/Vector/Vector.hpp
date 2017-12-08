@@ -35,12 +35,19 @@ class Vector {
 public:
 #pragma mark - 构造函数
 	// 构造函数
-	Vector(int capacity = DEFAULT_CAPACITY)
+//	Vector(int capacity = DEFAULT_CAPACITY)
+//	{
+//		_capacity = capacity;
+//		_size = 0;
+//		_elem = new T[_capacity];
+//	}
+
+	Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0)
 	{
-		_capacity = capacity;
-		_size = 0;
-		_elem = new T[_capacity];
+		_elem = new T[_capacity = c];
+		for ( _size = 0; _size < s; _elem[_size++] = v );
 	}
+
 	
 #pragma mark - 复制构造函数
 	// 复制构造函数
