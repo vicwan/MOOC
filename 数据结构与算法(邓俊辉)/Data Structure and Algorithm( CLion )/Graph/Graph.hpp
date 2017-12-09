@@ -15,6 +15,7 @@
 
 template <typename Tv, typename Te>
 class Graph {
+protected:
 	void reset()
     {
         for (int i = 0; i < _n; i++) {
@@ -42,6 +43,9 @@ public:	// 顶点操作, 边操作, 图算法
     virtual int& fTime( int ) = 0;          //结束时间
     virtual int& parent( int ) = 0;         //遍历书中的父亲
     virtual int& priority( int ) = 0;       //顶点优先级
+
+    virtual int firstNbr( int ) = 0;        //顶点 v 的首个邻接节点
+    virtual int nextNbr( int, int ) = 0;    //顶点 v 相对于顶点 j 的下一邻接节点
     
 #pragma mark - 边相关
     int _e;                                 //边总数

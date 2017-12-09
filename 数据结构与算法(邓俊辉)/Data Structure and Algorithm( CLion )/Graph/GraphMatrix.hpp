@@ -72,6 +72,17 @@ public:
         return v;
     }
 
+
+    virtual int nextNbr( int i, int j )
+    {
+        while((-1 < j) && !exists(i, --j));
+        return j;
+    }
+    virtual int firstNbr( int v )
+    {
+        return nextNbr(v, _n);
+    }
+
     /*边操作*/
 
     virtual bool exists( int i, int j ) const
@@ -104,6 +115,19 @@ public:
             _V[j]._inDegree--;
         }
         return e;
+    }
+
+    /*搜索算法*/
+
+    void bfs_single( int v, int& clock )
+    {
+
+    }
+
+
+    void BFS( int& v )  /*广度优先搜索*/
+    {
+
     }
 };
 
