@@ -125,9 +125,27 @@ public:
     }
 
 
-    void BFS( int& v )  /*广度优先搜索*/
+    void BFS( int& v )  /*广度优先搜索, v 是编号*/
     {
+        Queue<int> q = Queue<int>();
+        q.enqueue(v);
+        while (!q.empty()) {
+            int v = q.dequeue();
+            for (int u = firstNbr(v); -1 < u; u = nextNbr(v, u)) {
+                //对扫描到的节点进行处理
+                if( status_v(u) == UNDISCOVERED ) {
+                    status_v(u) = DISCOVERED;
+                    parent(u) = v;
+                    q.enqueue(u);
+                    edge(v, u) = TREE;
+                }else if( status_v(u) == VISITED ) {
+                    edge(v, u) = CROSS;
+                }
 
+
+                status_v(u) = VISITED;
+            }
+        }
     }
 };
 
