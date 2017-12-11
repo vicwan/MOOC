@@ -119,18 +119,14 @@ public:
 
     /*搜索算法*/
 
-    void bfs_single( int v, int& clock )
-    {
-
-    }
-
-
-    void BFS( int& v )  /*广度优先搜索, v 是编号*/
+    void bfs_single( int v, int& clock )    /*单个连通域内的搜索*/
     {
         Queue<int> q = Queue<int>();
+        status_v(v) = DISCOVERED;
         q.enqueue(v);
         while (!q.empty()) {
             int v = q.dequeue();
+            dTime(v) = ++clock;
             for (int u = firstNbr(v); -1 < u; u = nextNbr(v, u)) {
                 //对扫描到的节点进行处理
                 if( status_v(u) == UNDISCOVERED ) {
@@ -141,11 +137,15 @@ public:
                 }else if( status_v(u) == VISITED ) {
                     edge(v, u) = CROSS;
                 }
-
-
                 status_v(u) = VISITED;
             }
         }
+
+    }
+
+
+    void BFS( int& v, int& clock )  /*广度优先搜索, v 是编号*/
+    {
     }
 };
 
