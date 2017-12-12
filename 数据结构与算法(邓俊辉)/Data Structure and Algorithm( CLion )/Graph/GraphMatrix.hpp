@@ -15,6 +15,22 @@
 
 template <typename Tv, typename Te>
 class GraphMatrix: public Graph<Tv, Te> {
+
+    void reset()
+    {
+        for (int i = 0; i < _n; i++) {
+            status_v(i) = UNDISCOVERED;
+            dTime(i) = fTime(i) = -1;
+            parent(i) = -1;
+            priority(i) = __INTMAX_MAX__;
+            for (int j = 0; j < _e; j++) {
+                if (exists(i, j)) {
+                    status_e(i, j) == UNDETERMINED;
+                }
+            }
+        }
+    }
+
 	//顶点集
 	Vector< Vertex<Tv> > _V;
 	//边集 ( 邻接矩阵 )
@@ -25,11 +41,30 @@ public:
     GraphMatrix():_n(0), _e(0){};   /*构造函数*/
     /*顶点操作*/
 
-    virtual int& vertex( int i )
+    virtual int& vertex( int i )    /*顶点数据*/
     {
         return _V[i];
     }
-
+    virtual VStatus& status_v( int i )  /*顶点状态*/
+    {
+        return _V[i]._status;
+    }
+    virtual int& parent( int i )    /*顶点的父节点*/
+    {
+        return _V[i]._parent;
+    }
+    virtual int& dTime( int i )     /*顶点 discover 时间*/
+    {
+        return _V[i]._dTime;
+    }
+    virtual int& fTime( int i )     /*顶点结束时间*/
+    {
+        return _V[i]._fTime;
+    }
+    virtual int& priority( int i )     /*顶点结束时间*/
+    {
+        return _V[i]._priority;
+    }
     virtual int insert( Tv const& v )  /*顶点插入*/
     {
         //为邻接矩阵横向量 append 顶点
@@ -82,6 +117,10 @@ public:
     {
         return nextNbr(v, _n);
     }
+    virtual EStatus& status_e( int i, int j )
+    {
+        return status_e(i, j);
+    }
 
     /*边操作*/
 
@@ -118,12 +157,12 @@ public:
     }
 
     /*搜索算法*/
-
     void bfs_single( int v, int& clock )    /*单个连通域内的搜索*/
     {
         Queue<int> q = Queue<int>();
         status_v(v) = DISCOVERED;
         q.enqueue(v);
+
         while (!q.empty()) {
             int v = q.dequeue();
             dTime(v) = ++clock;
@@ -133,19 +172,29 @@ public:
                     status_v(u) = DISCOVERED;
                     parent(u) = v;
                     q.enqueue(u);
-                    edge(v, u) = TREE;
+                    status_e(v, u) = TREE;
                 }else if( status_v(u) == VISITED ) {
-                    edge(v, u) = CROSS;
+                    status_e(v, u) = CROSS;
                 }
                 status_v(u) = VISITED;
             }
         }
-
     }
-
-
-    void BFS( int& v, int& clock )  /*广度优先搜索, v 是编号*/
+    void BFS( int s )  /*广度优先搜索, v 是编号*/
     {
+        reset();
+        int clock = 0;
+        int v = s;
+        do {
+            if( status_v(v) == UNDISCOVERED ) {
+                bfs_single(v, clock);
+            }
+        }while( s != ( v = ( ++v % _n ) ) );
+        /* 这个循环条件拆解开之后, 可以看出其所要表达的意思.
+         * 无非就是要确定遍历了所有的顶点, 因为 s 极有可能不是第一个顶点
+         * 故取余的话可以让 v 的索引在 0-n 的范围之中循环
+         * 直到 v 循环一圈之后又与 s 相等, 则循环退出
+         * */
     }
 };
 

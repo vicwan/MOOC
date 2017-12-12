@@ -16,20 +16,7 @@
 template <typename Tv, typename Te>
 class Graph {
 protected:
-	void reset()
-    {
-        for (int i = 0; i < _n; i++) {
-            status_v(i) = UNDISCOVERED;
-            dTime(i) = fTime(i) = -1;
-            parent(i) = -1;
-            priority(i) = __INTMAX_MAX__;
-            for (int j = 0; j < _e; j++) {
-                if (exists(i, j)) {
-                    status_e(i, j) == UNDETERMINED;
-                }
-            }
-        }
-    }
+
 	
 public:	// 顶点操作, 边操作, 图算法
 #pragma mark - 顶点相关
