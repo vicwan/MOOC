@@ -1,3 +1,3 @@
-/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug/CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir
+/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug/CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir

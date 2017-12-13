@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include "Graph.hpp"
 #include "../Vector/Vector.hpp"
+//#include "../Stack and Queue/Stack.hpp"
+
 
 template <typename Tv, typename Te>
 class GraphMatrix: public Graph<Tv, Te> {
@@ -31,10 +33,10 @@ class GraphMatrix: public Graph<Tv, Te> {
         }
     }
 
-	//顶点集
-	Vector< Vertex<Tv> > _V;
-	//边集 ( 邻接矩阵 )
-	Vector< Vector< Edge<Te>*> > _E;    //_E[i][j] 表示 i->j 的有向边, i 为尾, j 为头.
+    //顶点集
+    Vector< Vertex<Tv> > _V;
+    //边集 ( 邻接矩阵 )
+    Vector< Vector< Edge<Te>*> > _E;    //_E[i][j] 表示 i->j 的有向边, i 为尾, j 为头.
 
     int _n, _e; //为何继承不过来?
 public:
@@ -195,6 +197,56 @@ public:
          * 故取余的话可以让 v 的索引在 0-n 的范围之中循环
          * 直到 v 循环一圈之后又与 s 相等, 则循环退出
          * */
+    }
+
+    /*首先 push(v), 搜索顶点 v 的一个邻居
+     * 然后这个邻居入栈, 搜索该邻居的所有邻居, 然后需要判断这个邻居是否符合要求, 符合即入栈, 不符合就不入栈
+     * 并需要更改这些边和顶点的状态*/
+    void dfs( int v, Stack<int>& s )
+    {
+        s.push(v);
+        vertex(v) = DISCOVERED;
+
+        while (!s.empty())
+        {
+            int u = firstNbr(s.top());
+
+        }
+    }
+    /*入栈操作*/
+    void goToTheBottom ( int v, Stack<int> S )
+    {
+        while(true) {
+            v = S.top();
+            for (int u = firstNbr(v); -1 < u ; u = nextNbr(v, u)) {
+                switch( status_v(u) ) {
+                    case UNDISCOVERED:
+                        S.push(u);
+                        parent(u) = v;
+                        status_e(v, u) = TREE;
+                        status_v(u) = DISCOVERED;
+                        v = u;
+                        break;
+
+                    default:
+                        return;
+                }
+            }
+        }
+
+    }
+    /*多个连通域*/
+    void DFS( int v )
+    {
+        Stack<int> S = Stack<int>();
+        int s = v;
+        do {
+            if (status_v(s) != VISITED)
+            {
+                dfs(s, S);
+            }
+        }while( s != (v = (v++%_n) ) );
+
     }
 };
 
