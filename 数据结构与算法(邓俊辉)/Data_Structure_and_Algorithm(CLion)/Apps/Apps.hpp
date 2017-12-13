@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>
-#include "../Stack and Queue/Stack.hpp"
+#include "../Stack_and_Queue/Stack.hpp"
 
 void convert ( int n, int base );   // n 转为 base 进制
 bool paren( const char exp[], int lo, int hi ); // 括号匹配判断

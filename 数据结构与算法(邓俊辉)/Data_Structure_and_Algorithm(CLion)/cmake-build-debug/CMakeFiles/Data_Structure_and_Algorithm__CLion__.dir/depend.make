@@ -13,8 +13,8 @@ CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Graph/GraphM
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Graph/Vertex.hpp
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../List/List.hpp
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../List/ListNode.hpp
-CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Stack\ and\ Queue/Queue.hpp
-CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Stack\ and\ Queue/Stack.hpp
+CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Stack_and_Queue/Queue.hpp
+CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Stack_and_Queue/Stack.hpp
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Vector/Vector.hpp
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../main.cpp
 

@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Apps/Apps.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Apps/Apps.hpp
 stdio.h
 -
 iostream
 -
-../Stack and Queue/Stack.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Stack and Queue/Stack.hpp
+../Stack_and_Queue/Stack.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Stack_and_Queue/Stack.hpp
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Apps/Traverse.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Apps/Traverse.hpp
 stdio.h
 -
 iostream
@@ -22,79 +22,79 @@ iostream
 type_traits
 -
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/BinTree/BinNode.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BinTree/BinNode.hpp
 stdio.h
 -
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/BinTree/BinTree.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BinTree/BinTree.hpp
 stdio.h
 -
 iostream
 -
 BinNode.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/BinTree/BinNode.hpp
-../Stack and Queue/Stack.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Stack and Queue/Stack.hpp
-../Stack and Queue/Queue.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Stack and Queue/Queue.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BinTree/BinNode.hpp
+../Stack_and_Queue/Stack.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Stack_and_Queue/Stack.hpp
+../Stack_and_Queue/Queue.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Stack_and_Queue/Queue.hpp
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/ErrorCode.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/ErrorCode.hpp
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Fibonacci/Fib.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Fibonacci/Fib.hpp
 stdio.h
 -
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Graph/Edge.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/Edge.hpp
 stdio.h
 -
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Graph/Graph.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/Graph.hpp
 stdio.h
 -
 Vertex.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Graph/Vertex.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/Vertex.hpp
 Edge.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Graph/Edge.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/Edge.hpp
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Graph/GraphMatrix.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/GraphMatrix.hpp
 stdio.h
 -
 Graph.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Graph/Graph.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/Graph.hpp
 ../Vector/Vector.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Vector/Vector.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Vector/Vector.hpp
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Graph/Vertex.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/Vertex.hpp
 stdio.h
 -
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/List/List.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/List/List.hpp
 stdio.h
 -
 assert.h
 -
 ListNode.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/List/ListNode.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/List/ListNode.hpp
 ../ErrorCode.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/ErrorCode.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/ErrorCode.hpp
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/List/ListNode.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/List/ListNode.hpp
 stdio.h
 -
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Stack and Queue/Queue.hpp
-stdio.h
--
-../List/List.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/List/List.hpp
-
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Stack and Queue/Stack.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Stack_and_Queue/Queue.hpp
 stdio.h
 -
 ../List/List.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/List/List.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/List/List.hpp
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Vector/Vector.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Stack_and_Queue/Stack.hpp
+stdio.h
+-
+../List/List.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/List/List.hpp
+
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Vector/Vector.hpp
 stdio.h
 -
 assert.h
@@ -102,23 +102,23 @@ assert.h
 stdlib.h
 -
 ../Fibonacci/Fib.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Fibonacci/Fib.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Fibonacci/Fib.hpp
 
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/main.cpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/main.cpp
 iostream
 -
 Apps/Apps.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Apps/Apps.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Apps/Apps.hpp
 Apps/Traverse.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Apps/Traverse.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Apps/Traverse.hpp
 Vector/Vector.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Vector/Vector.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Vector/Vector.hpp
 List/List.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/List/List.hpp
-Stack and Queue/Stack.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Stack and Queue/Stack.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/List/List.hpp
+Stack_and_Queue/Stack.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Stack_and_Queue/Stack.hpp
 BinTree/BinTree.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/BinTree/BinTree.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BinTree/BinTree.hpp
 Graph/GraphMatrix.hpp
-/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/Graph/GraphMatrix.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/GraphMatrix.hpp
 

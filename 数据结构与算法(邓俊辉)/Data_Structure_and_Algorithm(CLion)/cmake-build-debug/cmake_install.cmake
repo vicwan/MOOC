@@ -1,4 +1,4 @@
-# Install script for directory: /Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )
+# Install script for directory: /Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/vicwan/Desktop/Projects/MOOC/数据结构与算法(邓俊辉)/Data Structure and Algorithm( CLion )/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

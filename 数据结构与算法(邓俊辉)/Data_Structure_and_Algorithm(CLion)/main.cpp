@@ -13,7 +13,7 @@
 
 #include "Vector/Vector.hpp"
 #include "List/List.hpp"
-#include "Stack and Queue/Stack.hpp"
+#include "Stack_and_Queue/Stack.hpp"
 #include "BinTree/BinTree.hpp"
 #include "Graph/GraphMatrix.hpp"
 

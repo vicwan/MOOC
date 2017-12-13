@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "BinNode.hpp"
-#include "../Stack and Queue/Stack.hpp"
-#include "../Stack and Queue/Queue.hpp"
+#include "../Stack_and_Queue/Stack.hpp"
+#include "../Stack_and_Queue/Queue.hpp"
 
 using namespace std;
 
