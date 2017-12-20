@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BST/BST.h">
+			<Option target="Data_Structure_and_Algorithm__CLion__"/>
+		</Unit>
+		<Unit filename="/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BST/Entry.h">
+			<Option target="Data_Structure_and_Algorithm__CLion__"/>
+		</Unit>
 		<Unit filename="/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/main.cpp">
 			<Option target="Data_Structure_and_Algorithm__CLion__"/>
 		</Unit>
