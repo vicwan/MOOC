@@ -194,6 +194,30 @@ public:
 		}
 	}
 
+    bool isLChild( BinNodePosi(T) &n ) {
+        if( n->_parent->_lChild == n ) {
+            true;
+        } else {
+            false;
+        }
+    }
+
+    bool isRChild( BinNodePosi(T) &n ) {
+        if (n->_parent->_rChild == n) {
+            true;
+        } else {
+            false;
+        }
+    }
+
+    bool isRoot( BinNodePosi(T) &n ) {
+        if (n->_parent) {
+            false;
+        } else {
+            true;
+        }
+    }
+
     /*用于判断该节点是否存在子树*/
 //    bool operator !( BinNodePosi(T) const& node )
 //    {

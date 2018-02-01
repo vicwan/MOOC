@@ -16,6 +16,7 @@
 #include "Stack_and_Queue/Stack.hpp"
 #include "BinTree/BinTree.hpp"
 #include "Graph/GraphMatrix.hpp"
+#include "BST/AVL.h"
 
 
 using namespace std;
@@ -30,6 +31,7 @@ void test_list();
 void test_stack();
 void test_binTree();
 void test_queue();
+void test_avl();
 
 #pragma mark - Main 函数
 int main(int argc, const char * argv[]) {
@@ -49,8 +51,9 @@ int main(int argc, const char * argv[]) {
 	
 //	test_queue();
 	
-	test_binTree();
-	
+//	test_binTree();
+
+    test_avl();
 	
 
 	
@@ -227,4 +230,41 @@ void test_binTree()
 	binTree->travLevel(binTree->root(), visit_char);
 
 	cout << endl;
+}
+
+#define AVL_Int AVL<int>
+
+AVL_Int* createAVL() {
+    /*
+              8
+            /  \
+	       /    \
+		  4      10
+		 / \    / \
+	 	2   6  9   11
+       / \  / \
+	  1  3 5  7
+
+	 */
+
+    AVL_Int* avlTree = new AVL_Int();
+
+    BinNodePosi(int) node8 = avlTree->insertAsRoot(8);
+    BinNodePosi(int) node4 = avlTree->insertAsLC(node8, 4);
+    BinNodePosi(int) node10 = avlTree->insertAsRC(node8, 10);
+    BinNodePosi(int) node2 = avlTree->insertAsLC(node4, 2);
+    BinNodePosi(int) node6 = avlTree->insertAsRC(node4, 6);
+    BinNodePosi(int) node9 = avlTree->insertAsLC(node10, 9);
+    BinNodePosi(int) node11 = avlTree->insertAsRC(node10, 11);
+    BinNodePosi(int) node1 = avlTree->insertAsLC(node2, 1);
+    BinNodePosi(int) node3 = avlTree->insertAsRC(node2, 3);
+    BinNodePosi(int) node5 = avlTree->insertAsLC(node6, 5);
+    BinNodePosi(int) node7 = avlTree->insertAsRC(node6, 7);
+
+    return avlTree;
+}
+
+void test_avl()
+{
+
 }

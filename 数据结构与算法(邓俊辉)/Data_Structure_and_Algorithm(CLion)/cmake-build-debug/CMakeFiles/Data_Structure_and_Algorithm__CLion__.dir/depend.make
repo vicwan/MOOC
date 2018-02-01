@@ -3,6 +3,9 @@
 
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Apps/Apps.hpp
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../Apps/Traverse.hpp
+CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../BST/AVL.h
+CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../BST/BST.h
+CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../BST/Entry.h
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../BinTree/BinNode.hpp
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../BinTree/BinTree.hpp
 CMakeFiles/Data_Structure_and_Algorithm__CLion__.dir/main.cpp.o: ../ErrorCode.hpp

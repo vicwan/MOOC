@@ -75,6 +75,52 @@ protected:
         return succ;
     }
 
+    /*返回该子树新的根节点*/
+    BinNodePosi(T) __connect34( BinNodePosi(T) a, BinNodePosi(T) b, BinNodePosi(T) c,
+                              BinNodePosi(T) T0, BinNodePosi(T) T1, BinNodePosi(T) T2, BinNodePosi(T) T3 )
+    {
+        //在设置完毕 a 节点的左右子树后，更新子树 a 的高度
+        a->_lChild = T0; if( T0 ) T0->_parent = a;
+        a->_rChild = T1; if( T1 ) T1->_parent = a;
+        updateHeight(a);
+
+        c->_lChild = T2; if( T2 ) T2->_parent = c;
+        c->_rChild = T3; if( T3 ) T3->_parent = c;
+        updateHeight(c);
+
+        b->_lChild = a; a->_parent = b;
+        b->_rChild = c; c->_parent = b;
+        updateHeight(b);
+
+        return b;//返回新的根节点
+        //由于该方法仅仅是作用于局部，所以不要更新祖先节点的高度，因为那样已经超出了该函数的'作用域'。
+    }
+
+    BinNodePosi(T) __rotateAt( BinNodePosi(T) v )
+    {
+        BinNodePosi(T) p = v->_parent;
+        BinNodePosi(T) g = p->_parent;
+        //如果节点 p 为 g 的左孩子, zig
+        if( isLChild(p) ) {
+            //如果节点 v 为 p 的左孩子 zig-zig
+            if( isLChild(v) ) {
+                p->_parent = g->_parent;
+                return __connect34(v, p, g, v->_lChild, v->_rChild, p->_rChild, g->_rChild);
+            } else {    //zig-zag
+                v->_parent = g->_parent;
+                return __connect34(p, v, g, p->_lChild, v->_lChild, v->_rChild, g->_rChild);
+            }
+        } else { //zag
+            if( isLChild(p) ) { //zag-zig
+                v->_parent = g->_parent;
+                return __connect34(g, v, p, g->_lChild, v->_lChild, v->_rChild, p->_rChild);
+            } else { //zag-zag
+                p->_parent = g->_parent;
+                return __connect34(g, p, v, g->_lChild, p->_lChild, v->_lChild, v->_rChild);
+            }
+        }
+    }
+
 public:
 
     BinNodePosi(T) search( T const& e ) {

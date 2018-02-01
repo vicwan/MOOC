@@ -22,6 +22,20 @@ iostream
 type_traits
 -
 
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BST/AVL.h
+BST.h
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BST/BST.h
+
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BST/BST.h
+stdio.h
+-
+../BinTree/BinTree.hpp
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BinTree/BinTree.hpp
+Entry.h
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BST/Entry.h
+
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BST/Entry.h
+
 /Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BinTree/BinNode.hpp
 stdio.h
 -
@@ -121,4 +135,6 @@ BinTree/BinTree.hpp
 /Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BinTree/BinTree.hpp
 Graph/GraphMatrix.hpp
 /Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/Graph/GraphMatrix.hpp
+BST/AVL.h
+/Users/wanweiqi/MOOC/数据结构与算法(邓俊辉)/Data_Structure_and_Algorithm(CLion)/BST/AVL.h
 
