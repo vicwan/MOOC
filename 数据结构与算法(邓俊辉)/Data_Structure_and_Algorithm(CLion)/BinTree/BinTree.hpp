@@ -218,6 +218,14 @@ public:
         }
     }
 
+     void attachAsLChild( BinNodePosi(T) parent, BinNodePosi(T) child ) {
+
+    }
+
+     void attachAsRChild( BinNodePosi(T) parent, BinNodePosi(T) child ) {
+
+     }
+
     /*用于判断该节点是否存在子树*/
 //    bool operator !( BinNodePosi(T) const& node )
 //    {
